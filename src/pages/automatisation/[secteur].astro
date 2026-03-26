@@ -1,0 +1,184 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import sectorsData from '~/data/sectors.json';
+
+export async function getStaticPaths() {
+  return sectorsData.map((sector: any) => ({
+    params: { secteur: sector.slug },
+    props: { sector },
+  }));
+}
+
+const { sector } = Astro.props;
+
+const metadata = {
+  title: `Automatisation pour ${sector.label} — UpgradR`,
+  description: sector.meta_description,
+};
+
+// JSON-LD spécifique à la page secteur
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Automatisation pour ${sector.label_plural}`,
+  "provider": { "@id": "https://upgradr.fr/#organization" },
+  "description": sector.intro,
+  "areaServed": "Francophonie",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero-title", ".hero-subtitle", ".faq-section"]
+  }
+};
+
+// BreadcrumbList JSON-LD
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://upgradr.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Automatisation", "item": "https://upgradr.fr/automatisation" },
+    { "@type": "ListItem", "position": 3, "name": sector.label, "item": `https://upgradr.fr/automatisation/${sector.slug}` },
+  ],
+};
+
+const faqJsonLd = sector.faq?.length ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": sector.faq.map((f: any) => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.reponse },
+  })),
+} : null;
+
+const toolIcons: Record<string, string> = {
+  "Make": "tabler:refresh",
+  "Zapier": "tabler:bolt",
+  "n8n": "tabler:code",
+  "Airtable": "tabler:table",
+  "Notion": "tabler:notebook",
+  "HubSpot": "tabler:brand-hipchat",
+  "Gmail": "tabler:mail",
+  "Slack": "tabler:brand-slack",
+  "Google Sheets": "tabler:table",
+  "Calendly": "tabler:calendar",
+  "Stripe": "tabler:credit-card",
+  "Typeform": "tabler:forms",
+  "default": "tabler:plug-connected",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- JSON-LD page spécifique -->
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(pageJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  {faqJsonLd && <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqJsonLd)} />}
+
+  <!-- Hero -->
+  <Hero
+    tagline="Automatisation"
+    actions={[
+      {
+        variant: 'primary',
+        text: `Diagnostic ${sector.label}`,
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+      { text: 'Voir nos services', href: '/#services' },
+    ]}
+  >
+    <Fragment slot="title">
+      Automatisation pour les
+      <span class="text-accent dark:text-white"> {sector.label_plural}</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      {sector.intro}
+    </Fragment>
+  </Hero>
+
+  <!-- Tâches à automatiser -->
+  <Features
+    id="taches"
+    tagline="Ce qu'on automatise"
+    title={`Les 6 tâches prioritaires dans un ${sector.label}`}
+    subtitle={`Chaque heure récupérée sur ces tâches, c'est du temps pour vos clients — pas pour vos tableurs.`}
+    items={sector.taches.map((t: any) => ({
+      title: t.titre,
+      description: `${t.description} — <strong>${t.temps_economise}</strong> économisées. Outils : ${t.outils.join(', ')}.`,
+      icon: 'tabler:robot',
+    }))}
+  />
+
+  <!-- Workflow exemple -->
+  <Steps
+    id="workflow"
+    title={sector.workflow_exemple.titre}
+    subtitle={sector.workflow_exemple.contexte}
+    items={[
+      ...sector.workflow_exemple.etapes.map((etape: string, i: number) => ({
+        title: etape,
+        icon: `tabler:circle-number-${i + 1}`,
+      })),
+      {
+        title: `Résultat : ${sector.workflow_exemple.gain}`,
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2070&q=80',
+      alt: `Automatisation ${sector.label}`,
+    }}
+  />
+
+  <!-- Outils recommandés -->
+  <Features
+    id="outils"
+    tagline="Stack recommandé"
+    title={`Outils d'automatisation pour ${sector.label_plural}`}
+    subtitle="On choisit les outils selon votre stack existant — pas l'inverse."
+    columns={4}
+    items={sector.outils_recommandes.map((outil: string) => ({
+      title: outil,
+      description: '',
+      icon: toolIcons[outil] || toolIcons['default'],
+    }))}
+  />
+
+  <!-- FAQ secteur -->
+  {sector.faq?.length && (
+    <FAQs
+      id="faq"
+      tagline="FAQ"
+      title={`Questions sur l'automatisation pour ${sector.label_plural}`}
+      classes={{ container: 'max-w-6xl' }}
+      items={sector.faq.map((f: any) => ({
+        title: f.question,
+        description: f.reponse,
+      }))}
+    />
+  )}
+
+  <!-- CTA -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: `Demander un diagnostic ${sector.label}`,
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ROI estimé pour votre {sector.label} : <span class="text-accent">{sector.roi_estime}</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Diagnostic express pour cartographier vos pertes de temps et établir un plan d'automatisation sur mesure.
+    </Fragment>
+  </CallToAction>
+</Layout>

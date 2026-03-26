@@ -1,0 +1,304 @@
+[
+  {
+    "slug": "artisan-batiment",
+    "label": "Artisan / BTP",
+    "label_plural": "artisans et entreprises du BTP",
+    "intro": "Les artisans et entreprises du BTP perdent en moyenne 12 heures par semaine sur des tâches administratives répétitives. Cela représente 18 000 € de pertes annuelles par salarié en productivité gaspillée. L'automatisation libère 8 heures hebdomadaires pour se concentrer sur les chantiers rentables.",
+    "taches": [
+      {
+        "titre": "Devis manuels papier",
+        "description": "Rédaction manuelle de devis prend 4h/semaine ; automatisée via IA qui génère devis en 5 min à partir de modèles CCTP analysés.",
+        "outils": [
+          "Procore",
+          "IA PlanRadar"
+        ],
+        "temps_economise": "3h/semaine"
+      },
+      {
+        "titre": "Facturation clients retardée",
+        "description": "Saisie manuelle des factures consomme 5h/semaine ; automatisée par ERP qui envoie factures automatiques post-chantier.",
+        "outils": [
+          "Sage BTP",
+          "Effy"
+        ],
+        "temps_economise": "4h/semaine"
+      },
+      {
+        "titre": "Suivi planning chantiers",
+        "description": "Mise à jour manuelle des plannings coûte 6h/semaine ; IA prédictive ajuste en temps réel et réduit retards de 15%.",
+        "outils": [
+          "BIM 360",
+          "Algolia IA"
+        ],
+        "temps_economise": "5h/semaine"
+      },
+      {
+        "titre": "Gestion stocks matériaux",
+        "description": "Inventaires manuels prennent 3h/semaine ; automatisée par capteurs IoT et alertes seuils en temps réel.",
+        "outils": [
+          "Trimble",
+          "Mobix ERP"
+        ],
+        "temps_economise": "2h/semaine"
+      },
+      {
+        "titre": "Rapports chantiers hebdo",
+        "description": "Compilation manuelle de rapports avale 4h/semaine ; dashboards IA génèrent synthèses automatiques avec photos chantier.",
+        "outils": [
+          "Fieldwire",
+          "Thunderbit"
+        ],
+        "temps_economise": "3h/semaine"
+      },
+      {
+        "titre": "Appels d'offres manuels",
+        "description": "Préparation appels d'offres exige 7h/semaine ; IA extrait clauses CCTP et compare offres similaires en 20 min.",
+        "outils": [
+          "Autodesk",
+          "IA BTP"
+        ],
+        "temps_economise": "6h/semaine"
+      }
+    ],
+    "workflow_exemple": {
+      "titre": "Workflow automatisé devis-chantier-facture",
+      "contexte": "Les artisans BTP perdent 10h/semaine sur cycle devis à facturation, causant 20% de retards clients.",
+      "etapes": [
+        "Étape 1 : Client envoie demande via formulaire Procore, IA génère devis auto en 3 min",
+        "Étape 2 : Signature électronique via Effy, planning BIM 360 se met à jour instantanément",
+        "Étape 3 : Avancement chantier tracké par Fieldwire, alertes retards IA PlanRadar",
+        "Étape 4 : Facture Sage BTP envoyée auto à 100% chantier fini, paiement +15% plus rapide"
+      ],
+      "gain": "9h/semaine économisées soit ~1400€/mois (base SMIC chargé)"
+    },
+    "outils_recommandes": [
+      "Procore",
+      "Sage BTP",
+      "PlanRadar",
+      "Fieldwire"
+    ],
+    "roi_estime": "10 à 15 heures automatisées par semaine, soit 1500€ à 2300€ économisés par mois",
+    "faq": [
+      {
+        "question": "Combien d'heures l'automatisation économise-t-elle vraiment en BTP ?",
+        "reponse": "8 à 12h/semaine sur tâches admin pour artisans BTP. ROI en 6 mois via outils comme Procore."
+      },
+      {
+        "question": "Quels outils gratuits pour démarrer en automatisation BTP ?",
+        "reponse": "Fieldwire gratuit pour suivi chantiers, Effy essai 30 jours pour factures. Gain immédiat 3h/semaine."
+      },
+      {
+        "question": "Quel budget pour automatiser un atelier BTP de 5 personnes ?",
+        "reponse": "200€/mois pour Sage BTP + IA basique. Amortissement en 2 mois sur gains productivité."
+      },
+      {
+        "question": "Quels résultats attendre après 3 mois d'automatisation BTP ?",
+        "reponse": "15% retards en moins, 1200€/mois économisés. Productivité +25% sur chantiers selon études FFB."
+      }
+    ],
+    "meta_description": "Automatisation Artisan / BTP : économisez 12h/semaine sur admin. Outils IA, ROI 1500€/mois pour PME françaises. Guide 2026."
+  },
+  {
+    "slug": "cabinet-comptable",
+    "label": "Cabinet Comptable",
+    "label_plural": "cabinets comptables",
+    "intro": "Les cabinets comptables consacrent entre 50 et 60% de leur temps à des tâches répétitives de traitement de pièces comptables qui peuvent être automatisées. L'IA agentique et la facturation électronique obligatoire en 2026-2027 créent une opportunité majeure : les cabinets digitalisés affichent des gains de productivité de 40 à 60%. Concrètement, cela signifie passer du traitement manuel à l'automatisation intelligente des factures, imputations et relances clients.",
+    "taches": [
+      {
+        "titre": "Reconnaissance et extraction de factures",
+        "description": "Actuellement, les collaborateurs passent 8-10 heures par semaine à saisir manuellement les données de factures (montants, dates, fournisseurs). L'IA de Cegid Loop automatise la reconnaissance des factures, l'extraction des données et l'affectation dans les comptes, avec un système d'apprentissage qui s'améliore au fil des corrections.",
+        "outils": [
+          "Cegid Loop",
+          "Dext",
+          "Plateformes SaaS comptables"
+        ],
+        "temps_economise": "8-10h/semaine"
+      },
+      {
+        "titre": "Imputation comptable automatisée",
+        "description": "Les imputations manuelles consomment 6-8 heures par semaine par collaborateur. L'IA agentique analyse les comportements historiques et applique automatiquement les règles comptables sans intervention humaine, réduisant les erreurs et accélérant le processus.",
+        "outils": [
+          "Dext",
+          "Assistants IA agentiques",
+          "Cegid Loop"
+        ],
+        "temps_economise": "6-8h/semaine"
+      },
+      {
+        "titre": "Génération de fiches d'immobilisations",
+        "description": "La création manuelle de fiches d'immobilisations et des plans d'amortissement représente 4-5 heures par semaine. L'IA agentique génère automatiquement ces documents en analysant les données comptables et les règles fiscales applicables.",
+        "outils": [
+          "Assistants IA agentiques",
+          "Plateformes cloud comptables"
+        ],
+        "temps_economise": "4-5h/semaine"
+      },
+      {
+        "titre": "Automatisation des relances clients",
+        "description": "Les relances manuelles de clients pour factures impayées consomment 3-4 heures par semaine. L'IA agentique automatise l'envoi de relances selon des règles prédéfinies, avec suivi et escalade intelligente.",
+        "outils": [
+          "Dext",
+          "Assistants IA agentiques",
+          "Plateformes SaaS"
+        ],
+        "temps_economise": "3-4h/semaine"
+      },
+      {
+        "titre": "Traitement de la facturation électronique",
+        "description": "Avec l'obligation de facturation électronique (septembre 2026 pour grandes entreprises, 2027 pour PME), les cabinets doivent traiter des flux documentaires structurés. L'automatisation réduit le temps de traitement de 5-6 heures par semaine en intégrant directement les données dans les systèmes comptables.",
+        "outils": [
+          "Cegid Loop",
+          "Plateformes e-invoicing",
+          "Dext"
+        ],
+        "temps_economise": "5-6h/semaine"
+      },
+      {
+        "titre": "Rapprochement bancaire et lettrage",
+        "description": "Le rapprochement manuel des comptes bancaires et le lettrage des écritures représentent 4-5 heures par semaine. L'IA agentique automatise ces opérations en croisant les données bancaires avec les écritures comptables, avec validation intelligente des anomalies.",
+        "outils": [
+          "Assistants IA agentiques",
+          "Plateformes cloud comptables",
+          "Cegid Loop"
+        ],
+        "temps_economise": "4-5h/semaine"
+      }
+    ],
+    "workflow_exemple": {
+      "titre": "Automatisation complète du cycle facture-à-paiement",
+      "contexte": "Un cabinet comptable traite en moyenne 200-300 factures par semaine pour ses clients PME, ce qui représente 30-35 heures de travail manuel. L'automatisation réduit ce temps à 8-10 heures.",
+      "etapes": [
+        "Étape 1 : Réception automatique des factures via portail client ou email, capture par Cegid Loop avec reconnaissance OCR",
+        "Étape 2 : Extraction des données (montant, date, fournisseur, TVA) et validation par IA agentique selon règles métier",
+        "Étape 3 : Imputation comptable automatique basée sur analyse comportementale des imputations historiques via Dext",
+        "Étape 4 : Génération automatique des écritures comptables, rapprochement bancaire et alertes sur anomalies détectées"
+      ],
+      "gain": "25-27h/semaine économisées soit ~3 200€-3 400€/mois (base SMIC chargé à ~15€/h)"
+    },
+    "outils_recommandes": [
+      "Cegid Loop",
+      "Dext",
+      "Assistants IA agentiques",
+      "Plateformes cloud comptables SaaS"
+    ],
+    "roi_estime": "30-35 heures automatisées par semaine, soit 3 600€ à 4 200€ économisés par mois par cabinet (base SMIC chargé)",
+    "faq": [
+      {
+        "question": "Combien de temps faut-il pour mettre en place l'automatisation dans un cabinet comptable ?",
+        "reponse": "Entre 2 et 4 semaines pour une intégration progressive des outils IA sur les tâches prioritaires. Les gains de productivité de 40 à 60% sont mesurables dès le premier mois."
+      },
+      {
+        "question": "L'IA agentique remplace-t-elle les collaborateurs des cabinets comptables ?",
+        "reponse": "Non, elle libère du temps sur les tâches répétitives pour que les collaborateurs se concentrent sur l'analyse, le conseil et les missions à plus forte valeur ajoutée. 91% des experts-comptables voient l'IA comme une opportunité, pas une menace."
+      },
+      {
+        "question": "Quel est le coût d'implémentation pour un petit cabinet comptable ?",
+        "reponse": "Les solutions SaaS comme Cegid Loop et Dext proposent des tarifs modulables à partir de quelques centaines d'euros par mois. Le ROI est atteint en 2-3 mois grâce aux heures économisées."
+      },
+      {
+        "question": "La facturation électronique obligatoire en 2026-2027 rend-elle l'automatisation urgente ?",
+        "reponse": "Oui, l'automatisation est essentielle pour gérer les nouveaux flux de facturation électronique sans surcharge. Les cabinets digitalisés affichent 40 à 60% de gains de productivité face à cette transformation."
+      }
+    ],
+    "meta_description": "Automatisation Cabinet Comptable : économisez 30-35h/semaine avec l'IA agentique. Gains de productivité 40-60%, ROI en 2-3 mois. Factures, imputations, relances automatisées."
+  },
+  {
+    "slug": "agence-immobiliere",
+    "label": "Agence Immobilière",
+    "label_plural": "agences immobilières",
+    "intro": "Les agences immobilières françaises perdent 11 heures par semaine sur des tâches administratives répétitives. Cela représente 60% de leur temps, soit 28 800€ de pertes annuelles par agent. L'automatisation libère 7h/semaine pour plus de ventes et de prospection.",
+    "taches": [
+      {
+        "titre": "Génération de documents",
+        "description": "Rédaction manuelle de mandats et baux prend 4h/semaine ; automatisée via templates intelligents dans CRM immo, génère et envoie en 1 clic.",
+        "outils": [
+          "Netty",
+          "iad"
+        ],
+        "temps_economise": "3h/semaine"
+      },
+      {
+        "titre": "Suivi clients",
+        "description": "Relances manuelles par email et appel absorbent 4h/semaine ; automatisées par CRM avec rappels intelligents et emails programmés.",
+        "outils": [
+          "Pedra.ai",
+          "Bien'ici"
+        ],
+        "temps_economise": "2.5h/semaine"
+      },
+      {
+        "titre": "Planification visites",
+        "description": "Synchronisation agendas manuelle coûte 3h/semaine ; automatisée par calendriers partagés et confirmations SMS automatiques.",
+        "outils": [
+          "Google Calendar",
+          "Flash-Immo"
+        ],
+        "temps_economise": "2h/semaine"
+      },
+      {
+        "titre": "Saisie données rapports",
+        "description": "Saisie manuelle de données clients prend 3h/semaine ; intégrée via OCR et reporting auto dans logiciels immo.",
+        "outils": [
+          "Immo2.pro",
+          "CRM Netty"
+        ],
+        "temps_economise": "2.5h/semaine"
+      },
+      {
+        "titre": "Gestion signatures",
+        "description": "Envoi et suivi signatures papier mobilise 2h/semaine ; digitalisée par signatures électroniques sécurisées.",
+        "outils": [
+          "Yousign",
+          "DocuSign"
+        ],
+        "temps_economise": "1.5h/semaine"
+      },
+      {
+        "titre": "Relances acquéreurs",
+        "description": "Relances manuelles prospects coûtent 2h/semaine ; automatisées par séquences email et SMS dans CRM.",
+        "outils": [
+          "Bien'ici",
+          "Pedra.ai"
+        ],
+        "temps_economise": "1.5h/semaine"
+      }
+    ],
+    "workflow_exemple": {
+      "titre": "Workflow prospection automatisée",
+      "contexte": "Les agents perdent 5h/semaine en relances manuelles prospects, manquant 20% des opportunités de vente.",
+      "etapes": [
+        "Étape 1 : Import leads via Netty depuis annonces Leboncoin",
+        "Étape 2 : Envoi séquence emails auto par Pedra.ai",
+        "Étape 3 : Rappels SMS via Bien'ici si non-réponse",
+        "Étape 4 : RDV auto booké dans Google Calendar, gain 4h/semaine traitées"
+      ],
+      "gain": "4h/semaine économisées soit ~1200€/mois (base SMIC chargé)"
+    },
+    "outils_recommandes": [
+      "Netty",
+      "Pedra.ai",
+      "Bien'ici",
+      "Yousign"
+    ],
+    "roi_estime": "10 à 15 heures automatisées par semaine, soit 2000€ à 3500€ économisés par mois",
+    "faq": [
+      {
+        "question": "Quel temps gagné sur administratif en agence immo ?",
+        "reponse": "50% de réduction, soit 7h/semaine libérées pour prospection. Implémentez CRM Netty dès aujourd'hui."
+      },
+      {
+        "question": "Quels outils pour relances clients immo France ?",
+        "reponse": "Pedra.ai et Bien'ici automatisent emails/SMS. Gain immédiat 2.5h/semaine sur suivis."
+      },
+      {
+        "question": "Coût mise en place automatisation agence immo ?",
+        "reponse": "50-150€/mois par outil comme Netty. ROI en 1 mois via 1200€ d'heures économisées."
+      },
+      {
+        "question": "Résultats attendus automatisation agence immo ?",
+        "reponse": "10h/semaine gagnées en 2 semaines, +20% ventes. 3000€/mois nets après 3 mois."
+      }
+    ],
+    "meta_description": "Automatisation Agence Immobilière : gagnez 11h/semaine sur administratif. Outils CRM français, ROI 2000€/mois. Études sectorielles immo France 2026."
+  }
+]

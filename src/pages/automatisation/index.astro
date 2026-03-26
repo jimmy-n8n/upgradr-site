@@ -1,0 +1,171 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Automatisation pour TPE/PME : nos solutions par secteur — UpgradR',
+  description: 'Automatisez les processus de votre entreprise avec UpgradR. Solutions d\'automatisation pour artisans BTP, cabinets comptables, agences immobilières. Diagnostic gratuit.',
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://upgradr.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Automatisation", "item": "https://upgradr.fr/automatisation" },
+  ],
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Automatisation de processus pour TPE/PME",
+  "provider": { "@id": "https://upgradr.fr/#organization" },
+  "description": "UpgradR conçoit et déploie des workflows d'automatisation pour les TPE et PME francophones : artisans BTP, cabinets comptables, agences immobilières. Audit processus, intégration n8n/Make, résultats mesurables sous 30 jours.",
+  "areaServed": "Francophonie",
+  "serviceType": "Automatisation de processus métier",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero-title", ".hero-subtitle", ".hub-intro"]
+  }
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(serviceJsonLd)} />
+
+  <!-- Hero -->
+  <Hero
+    tagline="Automatisation PME"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Diagnostic gratuit',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+      { text: 'Voir les secteurs', href: '#secteurs' },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="hero-title">Automatisation pour TPE/PME :</span>
+      <span class="text-accent dark:text-white"> nos solutions par secteur</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      <span class="hero-subtitle">
+        Les TPE et PME françaises perdent en moyenne 12 heures par semaine sur des tâches manuelles évitables.
+        UpgradR automatise vos processus métier — sans recrutement, sans changer vos outils, sans complexité technique.
+        Résultats mesurables sous 30 jours ou remboursé.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Intro hub -->
+  <section class="hub-intro max-w-4xl mx-auto px-4 py-12 text-center">
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+      Automatiser les processus de votre entreprise, c'est récupérer du temps sur ce qui compte vraiment : vos clients, votre développement commercial, votre qualité de service.
+      UpgradR accompagne les TPE et PME francophones dans l'<strong>automatisation de leurs processus métier</strong> :
+      relances clients, gestion documentaire, rapports automatiques, synchronisation des outils.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+      On audite vos processus en 30 minutes, on identifie les 3 à 5 tâches qui vous coûtent le plus de temps,
+      et on déploie des workflows sur mesure avec <strong>n8n, Make ou Zapier</strong>.
+      Chaque automatisation est documentée, testée et maintenue par notre équipe.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+      Notre approche : pas de solution générique, des automatisations calées sur votre secteur.
+      Un artisan du BTP n'a pas les mêmes pertes de temps qu'un comptable ou qu'un agent immobilier.
+      C'est pourquoi on propose des <strong>solutions spécialisées par métier</strong>.
+    </p>
+  </section>
+
+  <!-- Les 3 secteurs piliers -->
+  <Features
+    id="secteurs"
+    tagline="Solutions par secteur"
+    title="Automatisation spécialisée par secteur d'activité"
+    subtitle="Chaque secteur a ses processus chronophages. On les connaît, on sait les automatiser."
+    items={[
+      {
+        title: 'Artisan / BTP',
+        description: 'Devis, relances chantier, planification équipes, facturation : les artisans et entreprises du BTP perdent jusqu\'à 8h/semaine sur l\'administratif. On automatise tout ça. <a href="/automatisation/artisan-batiment" class="text-primary font-semibold hover:underline">Voir les solutions →</a>',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Cabinet Comptable',
+        description: 'Collecte des pièces comptables, relances clients, rapports de gestion, onboarding dossiers : les cabinets comptables peuvent automatiser jusqu\'à 10h/semaine de tâches répétitives. <a href="/automatisation/cabinet-comptable" class="text-primary font-semibold hover:underline">Voir les solutions →</a>',
+        icon: 'tabler:calculator',
+      },
+      {
+        title: 'Agence Immobilière',
+        description: 'Qualification des leads, envoi de mandats, relances acquéreurs, reporting mensuel : les agences immobilières automatisent leurs tâches chronophages pour se concentrer sur les visites et la négociation. <a href="/automatisation/agence-immobiliere" class="text-primary font-semibold hover:underline">Voir les solutions →</a>',
+        icon: 'tabler:building-estate',
+      },
+    ]}
+  />
+
+  <!-- Tâches transversales automatisables -->
+  <Features2
+    id="taches-transversales"
+    tagline="Tâches automatisables"
+    title="Les tâches les plus courantes à automatiser dans une PME"
+    subtitle="Ces processus sont communs à la plupart des TPE/PME, quel que soit votre secteur."
+    items={[
+      {
+        title: 'Relances clients automatiques',
+        description: 'Envoi automatique de rappels de paiement, relances devis en attente, suivi après-vente. Économie moyenne : 3h/semaine.',
+        icon: 'tabler:mail-forward',
+      },
+      {
+        title: 'Gestion documentaire',
+        description: 'Classement automatique des documents, génération de PDF depuis formulaires, archivage dans le cloud. Économie moyenne : 2h/semaine.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Onboarding nouveaux clients',
+        description: 'Envoi automatique des documents d\'accueil, création des dossiers, attribution aux collaborateurs. Économie : 1h par nouveau client.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Synchronisation des outils',
+        description: 'Transfert automatique de données entre CRM, comptabilité, agenda et messagerie. Fini les doubles saisies.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Rapports et tableaux de bord',
+        description: 'Génération automatique des rapports hebdomadaires, KPIs, exports comptables. Économie : 2-4h/semaine.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Qualification des leads entrants',
+        description: 'Tri automatique des demandes, envoi de réponses personnalisées, attribution aux commerciaux selon critères définis.',
+        icon: 'tabler:filter',
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Demander un diagnostic gratuit',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Prêt à <span class="text-accent">automatiser votre entreprise</span> ?
+    </Fragment>
+    <Fragment slot="subtitle">
+      En 30 minutes, on identifie vos 3 plus grosses pertes de temps et on vous propose un plan d'automatisation concret.
+      Sans engagement, sans jargon technique.
+    </Fragment>
+  </CallToAction>
+</Layout>
