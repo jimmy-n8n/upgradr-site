@@ -1,0 +1,94 @@
+---
+// JSON-LD structuré pour UpgradR — Organization + Service + FAQPage
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://upgradr.fr/#organization",
+  "name": "UpgradR",
+  "url": "https://upgradr.fr",
+  "logo": "https://upgradr.fr/logo.svg",
+  "description": "Agence d'audit processus et automatisation pour PME et TPE francophones. Audit express dès 500€, automatisation sur mesure, intégration IA. Intervention 100% à distance partout en francophonie.",
+  "slogan": "Passez au niveau supérieur.",
+  "areaServed": [
+    { "@type": "Place", "name": "France" },
+    { "@type": "Place", "name": "Belgique" },
+    { "@type": "Place", "name": "Suisse" },
+    { "@type": "Place", "name": "Canada" },
+    { "@type": "Place", "name": "Québec" },
+    { "@type": "Place", "name": "Maroc" },
+    { "@type": "Place", "name": "Tunisie" }
+  ],
+  "serviceType": ["Audit processus", "Automatisation", "Intégration IA", "Conseil en transformation digitale"],
+  "priceRange": "€€",
+  "email": "contact@upgradr.fr",
+  "sameAs": []
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Audit processus & automatisation pour PME",
+  "provider": { "@id": "https://upgradr.fr/#organization" },
+  "description": "UpgradR cartographie vos processus, identifie les tâches automatisables et déploie les automations sur mesure. Audit express dès 500€, nettement plus rapide et actionnable que les grands audits financés BPI.",
+  "areaServed": "Francophonie",
+  "offers": {
+    "@type": "Offer",
+    "price": "500",
+    "priceCurrency": "EUR",
+    "description": "Audit processus express — cartographie de vos pertes de temps et recommandations actionnables"
+  },
+  "serviceOutput": "Plan d'automatisation avec ROI estimé et devis fixe",
+  "termsOfService": "https://upgradr.fr/terms"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte un audit processus chez UpgradR ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les audits UpgradR démarrent à 500€. C'est positionné en dessous des grands audits financés BPI, mais nettement plus rapide et actionnable. Chaque mission est au forfait fixe — pas de facturation à l'heure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UpgradR travaille-t-il avec les outils déjà en place dans mon entreprise ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dans la grande majorité des cas, oui. UpgradR s'adapte au stack existant (Google Workspace, Notion, Airtable, HubSpot, Salesforce, etc.) avant de recommander de nouveaux outils."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UpgradR intervient-il uniquement en France ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, UpgradR intervient dans toute la francophonie : France, Belgique, Suisse, Canada, Maroc, Tunisie. Les missions sont 100% à distance, disponible aux horaires métropole (8h–18h Paris)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps prend une mission d'automatisation ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entre 2 et 4 semaines selon la complexité. Certaines automations simples sont livrées en moins d'une semaine. Un suivi de 30 jours est inclus dans chaque mission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'automatisation est-elle réservée aux grandes entreprises ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. UpgradR travaille principalement avec des TPE et PME de 5 à 200 personnes. Les petites structures ont souvent le plus à gagner : chaque heure automatisée a un impact direct sur la rentabilité."
+      }
+    }
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
