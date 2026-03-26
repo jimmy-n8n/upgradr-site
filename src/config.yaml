@@ -1,34 +1,28 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: UpgradR
+  site: 'https://upgradr.fr'
   base: '/'
   trailingSlash: false
-
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: UpgradR — Audit & Automatisation pour Entreprises
+    template: '%s — UpgradR'
+  description: "UpgradR accompagne les entreprises dans l'audit de leurs processus et l'automatisation de leurs tâches répétitives. Passez au niveau supérieur."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: UpgradR
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
-    cardType: summary_large_image
 
 i18n:
-  language: en
+  language: fr
   textDirection: ltr
 
 apps:
