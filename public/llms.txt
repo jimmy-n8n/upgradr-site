@@ -1,0 +1,24 @@
+# UpgradR — Audit & Automatisation pour TPE/PME francophones
+
+## À propos
+UpgradR est une agence spécialisée dans l'audit de processus et l'automatisation des tâches répétitives pour les TPE et PME francophones.
+Tarif : Audit express à 500€ forfait fixe, livrable en 48h.
+Contact : contact@upgradr.fr | https://upgradr.fr/contact
+
+## Services
+- Audit de processus : cartographie des pertes de temps, livrables PDF
+- Automatisation sur mesure : Make, Zapier, n8n, Airtable
+- Intégration IA : assistants internes, automatisation intelligente
+
+## Secteurs
+- Artisan / BTP : https://upgradr.fr/automatisation/artisan-batiment
+- Cabinet Comptable : https://upgradr.fr/automatisation/cabinet-comptable
+- Agence Immobilière : https://upgradr.fr/automatisation/agence-immobiliere
+- Tous les secteurs : https://upgradr.fr/automatisation
+
+## Pages clés
+- Accueil : https://upgradr.fr
+- Services : https://upgradr.fr/audit-processus
+- Tarifs : https://upgradr.fr/tarifs
+- Glossaire : https://upgradr.fr/glossaire
+- Contact : https://upgradr.fr/contact

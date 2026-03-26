@@ -38,6 +38,14 @@ export const footerData = {
       ],
     },
     {
+      title: 'Ressources',
+      links: [
+        { text: 'Tarifs', href: '/tarifs' },
+        { text: 'Glossaire', href: '/glossaire' },
+        { text: 'Audit processus', href: '/audit-processus' },
+      ],
+    },
+    {
       title: 'Agence',
       links: [
         { text: 'À propos', href: '/about' },

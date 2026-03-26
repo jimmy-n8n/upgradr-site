@@ -1,0 +1,139 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Qu\'est-ce que le no-code / low-code ? Définition & exemples pour PME — UpgradR',
+  description: 'Définition du no-code et du low-code : Make, Zapier, n8n, Airtable. Comment automatiser sans coder et quels outils choisir pour une TPE ou PME.',
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://upgradr.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Glossaire", "item": "https://upgradr.fr/glossaire" },
+    { "@type": "ListItem", "position": 3, "name": "No-code / Low-code", "item": "https://upgradr.fr/glossaire/no-code-low-code" },
+  ],
+};
+
+const definedTermJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "No-code / Low-code",
+  "description": "Le no-code et le low-code désignent des plateformes permettant de créer des automatisations, des applications ou des flux de travail sans écrire de code (no-code) ou avec très peu de code (low-code). Ces outils démocratisent l'automatisation pour les entreprises sans équipe technique.",
+  "url": "https://upgradr.fr/glossaire/no-code-low-code",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "Glossaire UpgradR",
+    "url": "https://upgradr.fr/glossaire",
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(definedTermJsonLd)} />
+
+  <Hero
+    tagline="Glossaire"
+    actions={[
+      { variant: 'primary', text: 'Voir nos solutions', href: '/automatisation', icon: 'tabler:arrow-right' },
+      { text: 'Prendre contact', href: '/contact' },
+    ]}
+  >
+    <Fragment slot="title">
+      Qu'est-ce que le
+      <span class="text-accent dark:text-white"> no-code / low-code ?</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      La définition claire, les outils principaux et comment une PME peut automatiser sans développeur.
+    </Fragment>
+  </Hero>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:underline">Accueil</a> &rsaquo;
+      <a href="/glossaire" class="hover:underline">Glossaire</a> &rsaquo;
+      <span>No-code / Low-code</span>
+    </nav>
+
+    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Définition</h2>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      Le <strong>no-code</strong> et le <strong>low-code</strong> désignent des plateformes qui permettent de créer des automatisations, des applications ou des workflows sans écrire de code — ou avec très peu. Au lieu de faire appel à un développeur, vous utilisez des interfaces visuelles : drag-and-drop, blocs à connecter, formulaires de configuration. L'automatisation devient accessible à tous.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      La différence entre les deux : le <strong>no-code</strong> ne nécessite aucune compétence technique (Make, Zapier, Airtable, Notion), tandis que le <strong>low-code</strong> permet d'ajouter des scripts personnalisés pour les cas plus complexes (n8n, Retool, OutSystems). Pour 80% des besoins d'une PME, le no-code pur suffit largement.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-10">
+      Ces outils ont transformé l'automatisation en entreprise : ce qui nécessitait 3 mois de développement peut être déployé en quelques jours. Le coût est sans comparaison avec un développement custom — et la maintenance est beaucoup plus simple. C'est pourquoi UpgradR s'appuie principalement sur ces plateformes pour les missions client.
+    </p>
+
+    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Les outils no-code / low-code les plus utilisés en PME</h2>
+    <ul class="space-y-4 mb-10">
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Make (ex-Integromat) :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> l'outil de référence pour créer des workflows visuels entre vos applications. Idéal pour des automatisations complexes avec conditions et transformations de données.</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Zapier :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> le plus connu, parfait pour des automatisations simples entre deux applications. Très large catalogue d'intégrations (5000+ apps).</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">n8n :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> open-source et auto-hébergeable, n8n offre plus de flexibilité que Make ou Zapier pour les workflows avancés. Notre outil préféré pour les missions complexes.</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Airtable :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> base de données no-code qui combine tableur, CRM et outil de gestion de projets. Idéal comme hub de données central pour vos automatisations.</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-10">
+      <p class="text-gray-700 dark:text-gray-300 font-medium">
+        Vous voulez savoir quel outil est le mieux adapté à votre entreprise ?
+        <a href="/contact" class="text-primary font-semibold hover:underline ml-1">Diagnostic gratuit en 30 minutes →</a>
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Voir aussi</h2>
+    <ul class="space-y-2">
+      <li><a href="/glossaire/automatisation-processus" class="text-primary hover:underline">→ Qu'est-ce que l'automatisation de processus ?</a></li>
+      <li><a href="/glossaire/audit-processus" class="text-primary hover:underline">→ Qu'est-ce qu'un audit de processus ?</a></li>
+      <li><a href="/glossaire/rpa" class="text-primary hover:underline">→ Qu'est-ce que le RPA ?</a></li>
+      <li><a href="/automatisation" class="text-primary hover:underline">→ Nos solutions d'automatisation par secteur</a></li>
+    </ul>
+  </section>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Demander un diagnostic gratuit',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      On choisit les bons outils pour votre cas.
+    </Fragment>
+    <Fragment slot="subtitle">
+      Make, n8n, Zapier ou Airtable ? On vous dit lequel est adapté à votre activité — gratuitement, en 30 minutes.<br />
+      <a href="/automatisation" class="text-white underline">Voir nos solutions par secteur →</a>
+    </Fragment>
+  </CallToAction>
+</Layout>

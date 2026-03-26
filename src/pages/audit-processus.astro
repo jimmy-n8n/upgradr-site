@@ -1,0 +1,213 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+
+const metadata = {
+  title: 'Audit de processus pour TPE/PME — 500€ forfait fixe — UpgradR',
+  description: 'Cartographiez vos pertes de temps avec un audit de processus professionnel. Livrable PDF en 48h, plan d\'automatisation inclus. Tarif fixe 500€ sans surprise.',
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Audit de processus pour TPE/PME",
+  "provider": { "@id": "https://upgradr.fr/#organization" },
+  "description": "UpgradR cartographie vos processus métier, identifie les tâches automatisables et livre un rapport PDF actionnable en 48h. Tarif fixe 500€.",
+  "areaServed": "Francophonie",
+  "serviceType": "Audit de processus métier",
+  "offers": {
+    "@type": "Offer",
+    "name": "Audit Express",
+    "price": "500",
+    "priceCurrency": "EUR",
+    "description": "Audit complet de vos processus métier avec livrable PDF en 48h et plan d'automatisation.",
+    "seller": {
+      "@type": "Organization",
+      "name": "UpgradR",
+      "url": "https://upgradr.fr"
+    }
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero-title", ".hero-subtitle", ".faq-section"]
+  }
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://upgradr.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Audit de processus", "item": "https://upgradr.fr/audit-processus" },
+  ],
+};
+
+const faqItems = [
+  {
+    question: "Qu'est-ce qu'un audit de processus ?",
+    reponse: "Un audit de processus est une analyse structurée de vos flux de travail pour identifier les tâches manuelles chronophages, les goulots d'étranglement et les opportunités d'automatisation. On cartographie comment votre équipe travaille au quotidien pour vous montrer exactement où vous perdez du temps et de l'argent.",
+  },
+  {
+    question: "Pourquoi 500€ et pas moins ?",
+    reponse: "Notre audit inclut un appel découverte, une analyse terrain ou distancielle approfondie, un rapport PDF complet avec cartographie des processus, identification des automatisations prioritaires et leur ROI estimé, plus un plan d'action concret. C'est le tarif le plus bas du marché pour ce niveau de profondeur et d'expertise — les grands cabinets facturent 5 à 15 fois plus.",
+  },
+  {
+    question: "En combien de temps je reçois le livrable ?",
+    reponse: "Le rapport PDF vous est remis sous 48h après l'audit terrain ou distanciel. Pour les structures avec des processus complexes (plus de 5 départements ou flux), comptez 72h maximum.",
+  },
+  {
+    question: "Que se passe-t-il après l'audit ?",
+    reponse: "Vous recevez un plan d'automatisation priorisé avec les gains estimés pour chaque tâche. Si vous souhaitez qu'on mette en oeuvre les automatisations, on vous propose un devis fixe. L'audit reste utile même si vous le faites réaliser en interne — c'est un outil de pilotage.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map((f) => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.reponse },
+  })),
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(serviceJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqJsonLd)} />
+
+  <Hero
+    tagline="Audit processus — 500€ forfait fixe"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Prendre rendez-vous',
+        href: '/contact',
+        icon: 'tabler:calendar',
+      },
+      { text: 'Voir les tarifs', href: '/tarifs' },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="hero-title">Audit de processus pour TPE/PME :</span>
+      <span class="text-accent dark:text-white"> cartographiez vos pertes de temps</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      <span class="hero-subtitle">
+        En 48h, on vous livre un rapport PDF complet : cartographie de vos flux, identification des tâches automatisables et plan d'action priorisé.
+        <strong>Tarif fixe 500€, sans surprise.</strong>
+        Le point de départ de toute transformation efficace.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Ce qui est inclus -->
+  <Features
+    id="inclus"
+    tagline="Ce qui est inclus"
+    title="Un audit complet, pas un simple diagnostic"
+    subtitle="500€ forfait fixe — livrable PDF en 48h — plan d'automatisation inclus"
+    items={[
+      {
+        title: 'Cartographie des processus',
+        description: 'Schéma visuel de vos flux de travail actuels : qui fait quoi, avec quels outils, combien de temps ça prend. Une vision claire que vous n\'aviez probablement jamais eue.',
+        icon: 'tabler:map',
+      },
+      {
+        title: 'Identification des pertes de temps',
+        description: 'Liste précise des tâches manuelles répétitives, des doublons de saisie et des validations inutiles. Chaque poste de perte est quantifié en heures par semaine.',
+        icon: 'tabler:clock-x',
+      },
+      {
+        title: 'Opportunités d\'automatisation',
+        description: 'Pour chaque tâche identifiée, on indique les outils recommandés (n8n, Make, Zapier, etc.) et le ROI estimé. Vous savez exactement ce que chaque automation vous rapporte.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Plan d\'action priorisé',
+        description: 'Un plan en 3 à 5 étapes, classé par ordre d\'impact et de facilité de mise en oeuvre. Vous pouvez le confier à votre équipe IT ou nous demander de le réaliser.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Rapport PDF professionnel',
+        description: 'Document structuré, partageable avec votre direction ou vos équipes. Idéal pour justifier un investissement en automatisation auprès des décideurs.',
+        icon: 'tabler:file-description',
+      },
+      {
+        title: 'Appel de restitution inclus',
+        description: '30 minutes pour parcourir le rapport ensemble, répondre à vos questions et valider les priorités. On ne disparaît pas après la livraison du PDF.',
+        icon: 'tabler:phone-check',
+      },
+    ]}
+  />
+
+  <!-- Étapes -->
+  <Steps
+    id="etapes"
+    title="4 étapes pour votre audit"
+    subtitle="Un processus rodé, livrable en moins de 72h au total."
+    items={[
+      {
+        title: 'Étape 1 : <span class="font-medium">Appel découverte (30 min)</span>',
+        description: 'On comprend votre activité, vos outils et vos principaux irritants. Cet appel est gratuit et sans engagement — il nous permet de préparer l\'audit au mieux.',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Étape 2 : <span class="font-medium">Audit terrain ou distanciel</span>',
+        description: 'On observe vos processus en détail : entretiens avec les équipes, analyse des outils utilisés, mesure des temps passés sur chaque tâche. En présentiel ou par visioconférence.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'Étape 3 : <span class="font-medium">Rapport livrable PDF</span>',
+        description: 'Sous 48h, vous recevez votre rapport complet : cartographie des processus, pertes de temps identifiées, opportunités d\'automatisation chiffrées.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Étape 4 : <span class="font-medium">Plan d\'automatisation</span>',
+        description: 'On vous remet un plan d\'action concret avec les automatisations prioritaires, les outils recommandés et les gains attendus. Vous décidez de la suite.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2070&q=80',
+      alt: 'Audit de processus TPE PME',
+    }}
+  />
+
+  <!-- FAQ -->
+  <FAQs
+    id="faq"
+    tagline="FAQ"
+    title="Questions sur l'audit de processus"
+    classes={{ container: 'max-w-6xl faq-section' }}
+    items={faqItems.map((f) => ({
+      title: f.question,
+      description: f.reponse,
+    }))}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Réserver mon appel découverte',
+        href: '/contact',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Prêt à voir où part votre temps ?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Audit express à <strong>500€ forfait fixe</strong> — livrable PDF en 48h — plan d'automatisation inclus.<br />
+      Sans engagement, sans jargon technique.
+    </Fragment>
+  </CallToAction>
+</Layout>

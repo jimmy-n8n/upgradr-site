@@ -1,0 +1,132 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Qu\'est-ce qu\'un audit de processus ? Définition & exemples PME — UpgradR',
+  description: 'Définition de l\'audit de processus : comment ça se déroule, ce qu\'on y trouve et pourquoi c\'est le point de départ de toute automatisation réussie.',
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://upgradr.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Glossaire", "item": "https://upgradr.fr/glossaire" },
+    { "@type": "ListItem", "position": 3, "name": "Audit de processus", "item": "https://upgradr.fr/glossaire/audit-processus" },
+  ],
+};
+
+const definedTermJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Audit de processus",
+  "description": "Un audit de processus est une analyse structurée des flux de travail d'une entreprise pour identifier les tâches chronophages, les goulots d'étranglement et les opportunités d'automatisation. Il se conclut par un rapport livrable avec des recommandations concrètes.",
+  "url": "https://upgradr.fr/glossaire/audit-processus",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "Glossaire UpgradR",
+    "url": "https://upgradr.fr/glossaire",
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(definedTermJsonLd)} />
+
+  <Hero
+    tagline="Glossaire"
+    actions={[
+      { variant: 'primary', text: 'Voir notre offre d\'audit', href: '/audit-processus', icon: 'tabler:arrow-right' },
+      { text: 'Prendre contact', href: '/contact' },
+    ]}
+  >
+    <Fragment slot="title">
+      Qu'est-ce qu'un
+      <span class="text-accent dark:text-white"> audit de processus ?</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      La définition complète, comment ça se déroule et pourquoi c'est indispensable avant d'automatiser.
+    </Fragment>
+  </Hero>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:underline">Accueil</a> &rsaquo;
+      <a href="/glossaire" class="hover:underline">Glossaire</a> &rsaquo;
+      <span>Audit de processus</span>
+    </nav>
+
+    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Définition</h2>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      Un <strong>audit de processus</strong> est une analyse structurée des flux de travail d'une entreprise. L'objectif : comprendre comment les tâches s'enchaînent au quotidien, mesurer le temps passé sur chacune, identifier les goulots d'étranglement et détecter les opportunités d'automatisation. C'est une photographie précise de votre fonctionnement réel — pas de celui que vous croyez avoir.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      Un audit de processus se déroule généralement en trois phases : la collecte d'informations (entretiens, observations, analyse des outils), la modélisation des processus (cartographie visuelle des flux) et la production de recommandations (priorisation des actions, ROI estimé). Il se conclut par un livrable écrit — souvent un rapport PDF — partageable avec votre direction ou vos équipes.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-10">
+      Pour une TPE ou PME, un audit de processus prend généralement une à deux journées de travail. C'est le prérequis indispensable à toute démarche d'automatisation : on n'automatise pas ce qu'on ne comprend pas. Un audit bien mené permet d'éviter d'investir dans des automatisations inutiles ou mal ciblées.
+    </p>
+
+    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Exemples concrets pour une PME</h2>
+    <ul class="space-y-4 mb-10">
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Cabinet comptable :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> l'audit révèle que les collaborateurs passent 6h/semaine à relancer les clients pour récupérer leurs pièces comptables — une tâche automatisable à 100%.</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Agence immobilière :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> l'audit identifie que chaque nouvelle fiche mandant nécessite une saisie dans 3 outils différents — un processus à synchroniser avec une seule automatisation.</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Artisan BTP :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> l'audit montre que le dirigeant passe 4h/semaine à générer et envoyer des devis manuellement — un flux entier à automatiser avec Make et son logiciel métier.</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-10">
+      <p class="text-gray-700 dark:text-gray-300 font-medium">
+        UpgradR propose un audit de processus complet à forfait fixe.
+        <a href="/audit-processus" class="text-primary font-semibold hover:underline ml-1">Voir notre offre audit à 500€ →</a>
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Voir aussi</h2>
+    <ul class="space-y-2">
+      <li><a href="/glossaire/automatisation-processus" class="text-primary hover:underline">→ Qu'est-ce que l'automatisation de processus ?</a></li>
+      <li><a href="/glossaire/rpa" class="text-primary hover:underline">→ Qu'est-ce que le RPA ?</a></li>
+      <li><a href="/glossaire/no-code-low-code" class="text-primary hover:underline">→ Qu'est-ce que le no-code / low-code ?</a></li>
+      <li><a href="/automatisation" class="text-primary hover:underline">→ Nos solutions d'automatisation par secteur</a></li>
+    </ul>
+  </section>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Commander mon audit — 500€',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Passez à l'action avec un vrai audit.
+    </Fragment>
+    <Fragment slot="subtitle">
+      Livrable PDF en 48h, plan d'automatisation inclus, tarif fixe sans surprise.<br />
+      <a href="/audit-processus" class="text-white underline">En savoir plus sur notre offre d'audit →</a>
+    </Fragment>
+  </CallToAction>
+</Layout>

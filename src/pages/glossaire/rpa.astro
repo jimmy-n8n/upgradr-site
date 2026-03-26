@@ -1,0 +1,132 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Qu\'est-ce que le RPA (Robotic Process Automation) ? Définition & exemples — UpgradR',
+  description: 'Définition du RPA (Robotic Process Automation) : comment ça fonctionne, exemples concrets pour les PME et différence avec le no-code.',
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://upgradr.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Glossaire", "item": "https://upgradr.fr/glossaire" },
+    { "@type": "ListItem", "position": 3, "name": "RPA — Robotic Process Automation", "item": "https://upgradr.fr/glossaire/rpa" },
+  ],
+};
+
+const definedTermJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "RPA — Robotic Process Automation",
+  "description": "Le RPA (Robotic Process Automation) désigne des logiciels capables d'imiter les actions humaines sur une interface informatique pour automatiser des tâches répétitives : saisie de données, copier-coller entre applications, extraction d'informations depuis des PDF ou des emails.",
+  "url": "https://upgradr.fr/glossaire/rpa",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "Glossaire UpgradR",
+    "url": "https://upgradr.fr/glossaire",
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(definedTermJsonLd)} />
+
+  <Hero
+    tagline="Glossaire"
+    actions={[
+      { variant: 'primary', text: 'Voir nos solutions', href: '/automatisation', icon: 'tabler:arrow-right' },
+      { text: 'Prendre contact', href: '/contact' },
+    ]}
+  >
+    <Fragment slot="title">
+      Qu'est-ce que le
+      <span class="text-accent dark:text-white"> RPA (Robotic Process Automation) ?</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      La définition claire du RPA, comment ça s'applique en PME et en quoi c'est différent du no-code.
+    </Fragment>
+  </Hero>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:underline">Accueil</a> &rsaquo;
+      <a href="/glossaire" class="hover:underline">Glossaire</a> &rsaquo;
+      <span>RPA — Robotic Process Automation</span>
+    </nav>
+
+    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Définition</h2>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      Le <strong>RPA (Robotic Process Automation)</strong>, ou automatisation robotisée des processus, désigne des logiciels capables d'imiter les actions humaines sur une interface informatique. Concrètement, un robot RPA peut ouvrir une application, lire des données, les copier dans une autre application, remplir des formulaires ou envoyer des emails — exactement comme le ferait un collaborateur, mais sans fatigue ni erreur et en continu.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      Le RPA est particulièrement adapté aux tâches qui impliquent plusieurs logiciels sans API commune : récupérer des données dans un logiciel métier pour les saisir dans un autre, extraire des informations de PDF reçus par email, ou effectuer des opérations répétitives dans des applications legacy. Il ne remplace pas les outils — il crée un pont entre eux.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-10">
+      Outils RPA populaires : <strong>UiPath, Automation Anywhere, Power Automate (Microsoft)</strong>. Pour les PME sans DSI, les solutions no-code comme Make ou n8n remplissent souvent le même rôle pour un coût bien inférieur, dès que les applications disposent d'une API ou de webhooks.
+    </p>
+
+    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Exemples concrets pour une PME</h2>
+    <ul class="space-y-4 mb-10">
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Saisie comptable automatisée :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> un robot RPA lit les factures reçues par email, extrait les montants et les saisit automatiquement dans le logiciel comptable.</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Traitement des commandes :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> les commandes reçues par email sont automatiquement enregistrées dans l'ERP sans saisie manuelle, réduisant les erreurs de 90%.</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Génération de rapports :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> un robot collecte chaque semaine les données dans plusieurs outils et génère un rapport consolidé envoyé automatiquement à la direction.</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-10">
+      <p class="text-gray-700 dark:text-gray-300 font-medium">
+        Vous avez des tâches répétitives qui ressemblent à du RPA ?
+        <a href="/contact" class="text-primary font-semibold hover:underline ml-1">Parlons-en en 30 minutes →</a>
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Voir aussi</h2>
+    <ul class="space-y-2">
+      <li><a href="/glossaire/automatisation-processus" class="text-primary hover:underline">→ Qu'est-ce que l'automatisation de processus ?</a></li>
+      <li><a href="/glossaire/audit-processus" class="text-primary hover:underline">→ Qu'est-ce qu'un audit de processus ?</a></li>
+      <li><a href="/glossaire/no-code-low-code" class="text-primary hover:underline">→ Qu'est-ce que le no-code / low-code ?</a></li>
+      <li><a href="/automatisation" class="text-primary hover:underline">→ Nos solutions d'automatisation par secteur</a></li>
+    </ul>
+  </section>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Demander un diagnostic gratuit',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Vos tâches répétitives peuvent être automatisées.
+    </Fragment>
+    <Fragment slot="subtitle">
+      Diagnostic en 30 minutes pour identifier vos opportunités RPA et no-code.<br />
+      Sans engagement, sans jargon.
+    </Fragment>
+  </CallToAction>
+</Layout>

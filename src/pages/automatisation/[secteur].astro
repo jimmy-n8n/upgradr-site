@@ -163,6 +163,28 @@ const toolIcons: Record<string, string> = {
     />
   )}
 
+  <!-- Voir aussi : autres secteurs -->
+  {sectorsData.filter((s: any) => s.slug !== sector.slug).length > 0 && (
+    <section class="max-w-4xl mx-auto px-4 py-12">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Voir aussi</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">Nos solutions d'automatisation pour d'autres secteurs :</p>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {sectorsData.filter((s: any) => s.slug !== sector.slug).map((s: any) => (
+          <a
+            href={`/automatisation/${s.slug}`}
+            class="flex items-center gap-3 p-4 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-accent hover:bg-accent/5 transition-colors group"
+          >
+            <span class="text-accent group-hover:scale-110 transition-transform">→</span>
+            <div>
+              <div class="font-semibold text-gray-900 dark:text-white">{s.label}</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">{s.roi_estime.split(',')[0]}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
   <!-- CTA -->
   <CallToAction
     actions={[

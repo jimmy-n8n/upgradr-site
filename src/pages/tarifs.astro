@@ -1,0 +1,218 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Tarifs audit & automatisation — Transparence totale — UpgradR',
+  description: 'Tarifs clairs et sans surprise : audit express à 500€, automatisation sur mesure sur devis. Tout ce qui est inclus, les délais, les garanties.',
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://upgradr.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Tarifs", "item": "https://upgradr.fr/tarifs" },
+  ],
+};
+
+const offerJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "name": "Audit Express — UpgradR",
+  "description": "Audit complet de vos processus métier avec cartographie des pertes de temps, identification des automatisations prioritaires et livrable PDF en 48h.",
+  "price": "500",
+  "priceCurrency": "EUR",
+  "availability": "https://schema.org/InStock",
+  "seller": {
+    "@type": "Organization",
+    "name": "UpgradR",
+    "url": "https://upgradr.fr",
+  },
+  "url": "https://upgradr.fr/audit-processus",
+};
+
+const faqItems = [
+  {
+    question: 'Pourquoi 500€ pour un audit ?',
+    reponse: 'L\'audit express UpgradR inclut un appel découverte, une analyse approfondie de vos processus (terrain ou distanciel), un rapport PDF complet avec cartographie, identification des pertes de temps et plan d\'automatisation priorisé avec ROI estimé, plus un appel de restitution. Les grands cabinets facturent ce niveau d\'analyse 3 000 à 10 000€. On le fait pour 500€ parce qu\'on a industrialisé notre méthode sur des dizaines de PME.',
+  },
+  {
+    question: 'Quel est le délai de livraison ?',
+    reponse: 'Le rapport PDF vous est livré sous 48h après l\'audit terrain ou distanciel. Pour les structures plus complexes (plusieurs départements, plus de 10 processus à analyser), comptez 72h maximum. L\'appel de restitution est planifié dans les 5 jours ouvrés.',
+  },
+  {
+    question: 'Quelles sont vos garanties ?',
+    reponse: 'Deux garanties : (1) Si vous estimez que le rapport ne vous apporte aucune valeur après l\'appel de restitution, on rembourse intégralement — sans question. (2) Pour les missions d\'automatisation, suivi 30 jours post-déploiement inclus. Si une automation ne fonctionne pas comme prévu ou si un besoin évolue, on corrige sans facturation supplémentaire pendant cette période.',
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map((f) => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": { "@type": "Answer", "text": f.reponse },
+  })),
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(offerJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqJsonLd)} />
+
+  <Hero
+    tagline="Tarifs"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Prendre contact',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+      { text: 'Voir l\'audit', href: '/audit-processus' },
+    ]}
+  >
+    <Fragment slot="title">
+      Tarifs audit & automatisation —
+      <span class="text-accent dark:text-white"> transparence totale</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Pas de facturation à l'heure, pas de surprises en fin de mission. Des tarifs fixes, clairs, discutés avant de commencer.
+    </Fragment>
+  </Hero>
+
+  <!-- Pricing table -->
+  <section class="max-w-5xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Audit Express -->
+      <div class="border-2 border-accent rounded-2xl p-8 relative">
+        <div class="absolute -top-4 left-6 bg-accent text-white text-sm font-semibold px-4 py-1 rounded-full">
+          Point de départ recommandé
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Audit Express</h2>
+        <div class="flex items-baseline gap-2 mb-6">
+          <span class="text-5xl font-extrabold text-accent">500€</span>
+          <span class="text-gray-500 dark:text-gray-400">forfait fixe</span>
+        </div>
+        <p class="text-gray-600 dark:text-gray-400 mb-6">
+          Cartographiez vos pertes de temps et identifiez vos opportunités d'automatisation. Livrable PDF en 48h.
+        </p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Appel découverte 30 min (offert)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Audit terrain ou distanciel</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Cartographie visuelle des processus</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Rapport PDF complet sous 48h</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Plan d'automatisation priorisé + ROI estimé</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Appel de restitution inclus</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Remboursé si non satisfait</span>
+          </li>
+        </ul>
+        <a href="/contact" class="block w-full text-center bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+          Commander l'audit
+        </a>
+      </div>
+
+      <!-- Automatisation sur mesure -->
+      <div class="border border-gray-200 dark:border-gray-700 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Automatisation sur mesure</h2>
+        <div class="flex items-baseline gap-2 mb-6">
+          <span class="text-3xl font-extrabold text-gray-900 dark:text-white">Sur devis</span>
+        </div>
+        <p class="text-gray-600 dark:text-gray-400 mb-6">
+          Déploiement des automatisations identifiées dans l'audit. Devis fixe avant toute mission — pas de facturation à l'heure.
+        </p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Développement des workflows (Make, n8n, Zapier)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Connexion de vos outils existants</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Tests et recette avec vos équipes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Formation de vos équipes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Documentation complète des workflows</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-gray-700 dark:text-gray-300">Suivi 30 jours post-déploiement inclus</span>
+          </li>
+        </ul>
+        <a href="/contact" class="block w-full text-center border-2 border-gray-900 dark:border-white hover:bg-gray-900 dark:hover:bg-white text-gray-900 dark:text-white hover:text-white dark:hover:text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors">
+          Demander un devis
+        </a>
+      </div>
+    </div>
+
+    <p class="text-center text-gray-500 dark:text-gray-400 mt-8 text-sm">
+      Toutes les missions commencent par un appel découverte gratuit de 30 minutes — sans engagement.
+    </p>
+  </section>
+
+  <!-- FAQ tarifs -->
+  <FAQs
+    id="faq"
+    tagline="FAQ tarifs"
+    title="Vos questions sur les tarifs"
+    classes={{ container: 'max-w-6xl' }}
+    items={faqItems.map((f) => ({
+      title: f.question,
+      description: f.reponse,
+    }))}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Prendre contact',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Prêt à commencer ?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Appel découverte gratuit en 30 minutes — on identifie ensemble les opportunités d'automatisation de votre entreprise.<br />
+      Audit express à <strong>500€ forfait fixe</strong> si vous souhaitez aller plus loin.
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,139 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Qu\'est-ce que l\'automatisation de processus ? Définition & exemples — UpgradR',
+  description: 'Définition claire de l\'automatisation de processus pour les TPE et PME : comment ça marche, exemples concrets et outils recommandés.',
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://upgradr.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Glossaire", "item": "https://upgradr.fr/glossaire" },
+    { "@type": "ListItem", "position": 3, "name": "Automatisation de processus", "item": "https://upgradr.fr/glossaire/automatisation-processus" },
+  ],
+};
+
+const definedTermJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Automatisation de processus",
+  "description": "L'automatisation de processus consiste à utiliser des logiciels pour exécuter automatiquement des tâches répétitives et manuelles dans une entreprise, remplaçant ainsi les interventions humaines pour des opérations à faible valeur ajoutée.",
+  "url": "https://upgradr.fr/glossaire/automatisation-processus",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "Glossaire UpgradR",
+    "url": "https://upgradr.fr/glossaire",
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(definedTermJsonLd)} />
+
+  <Hero
+    tagline="Glossaire"
+    actions={[
+      { variant: 'primary', text: 'Automatiser mon entreprise', href: '/automatisation', icon: 'tabler:arrow-right' },
+      { text: 'Prendre contact', href: '/contact' },
+    ]}
+  >
+    <Fragment slot="title">
+      Qu'est-ce que
+      <span class="text-accent dark:text-white"> l'automatisation de processus ?</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      La définition complète, les exemples concrets et les outils — pour les dirigeants de TPE et PME.
+    </Fragment>
+  </Hero>
+
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:underline">Accueil</a> &rsaquo;
+      <a href="/glossaire" class="hover:underline">Glossaire</a> &rsaquo;
+      <span>Automatisation de processus</span>
+    </nav>
+
+    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Définition</h2>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      L'<strong>automatisation de processus</strong> consiste à utiliser des logiciels pour exécuter automatiquement des tâches répétitives et manuelles dans une entreprise. Au lieu qu'un collaborateur passe du temps à copier des données, envoyer des emails de relance ou générer des rapports, un programme le fait à sa place — sans erreur, sans délai, 24h/24.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      On distingue deux grandes familles : l'automatisation de processus métier (BPA, Business Process Automation), qui cible les flux de travail liés à l'activité principale, et l'automatisation des tâches informatiques (scripting, intégrations API). Pour une TPE ou PME, l'enjeu est simple : réduire le temps passé sur des tâches à faible valeur ajoutée pour le concentrer sur ce qui crée vraiment de la valeur.
+    </p>
+    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-10">
+      Les outils no-code comme <strong>Make, Zapier ou n8n</strong> ont rendu l'automatisation accessible sans compétences techniques. Une PME peut aujourd'hui automatiser ses relances clients, sa gestion documentaire ou ses rapports hebdomadaires en quelques jours — pour quelques centaines d'euros.
+    </p>
+
+    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Exemples concrets pour une PME</h2>
+    <ul class="space-y-4 mb-10">
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Relances clients automatiques :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> quand une facture n'est pas payée sous 15 jours, le client reçoit automatiquement un email de relance sans action humaine.</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Onboarding client automatisé :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> à la signature d'un contrat, le dossier client est créé dans le CRM, le document d'accueil envoyé et le collaborateur référent notifié — automatiquement.</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Rapport hebdomadaire automatique :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> chaque lundi matin, le manager reçoit un rapport consolidé de l'activité de la semaine précédente, sans qu'aucun collaborateur n'ait eu à le préparer.</span>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="text-accent font-bold text-lg">→</span>
+        <div>
+          <strong class="text-gray-900 dark:text-white">Synchronisation des outils :</strong>
+          <span class="text-gray-700 dark:text-gray-300"> quand une commande est passée dans le CRM, elle est automatiquement saisie dans le logiciel comptable — fini les doubles saisies.</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-10">
+      <p class="text-gray-700 dark:text-gray-300 font-medium">
+        Vous souhaitez identifier les processus automatisables dans votre entreprise ?
+        <a href="/audit-processus" class="text-primary font-semibold hover:underline ml-1">Découvrez notre audit de processus à 500€ →</a>
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Voir aussi</h2>
+    <ul class="space-y-2">
+      <li><a href="/glossaire/audit-processus" class="text-primary hover:underline">→ Qu'est-ce qu'un audit de processus ?</a></li>
+      <li><a href="/glossaire/rpa" class="text-primary hover:underline">→ Qu'est-ce que le RPA (Robotic Process Automation) ?</a></li>
+      <li><a href="/glossaire/no-code-low-code" class="text-primary hover:underline">→ Qu'est-ce que le no-code / low-code ?</a></li>
+      <li><a href="/automatisation" class="text-primary hover:underline">→ Nos solutions d'automatisation par secteur</a></li>
+    </ul>
+  </section>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Demander un diagnostic gratuit',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Prêt à automatiser votre entreprise ?
+    </Fragment>
+    <Fragment slot="subtitle">
+      En 30 minutes, on identifie vos 3 plus grosses pertes de temps et on vous propose un plan concret.<br />
+      Sans engagement, sans jargon.
+    </Fragment>
+  </CallToAction>
+</Layout>

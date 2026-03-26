@@ -1,0 +1,123 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Glossaire automatisation & audit processus — UpgradR',
+  description: 'Définitions claires des termes clés de l\'automatisation et de l\'audit de processus : RPA, no-code, low-code, workflow. Pour les TPE et PME.',
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://upgradr.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Glossaire", "item": "https://upgradr.fr/glossaire" },
+  ],
+};
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Glossaire automatisation et audit processus",
+  "description": "Définitions des termes clés de l'automatisation et de l'audit de processus pour les TPE et PME.",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Automatisation de processus",
+      "url": "https://upgradr.fr/glossaire/automatisation-processus",
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Audit de processus",
+      "url": "https://upgradr.fr/glossaire/audit-processus",
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RPA — Robotic Process Automation",
+      "url": "https://upgradr.fr/glossaire/rpa",
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "No-code / Low-code",
+      "url": "https://upgradr.fr/glossaire/no-code-low-code",
+    },
+  ],
+};
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(itemListJsonLd)} />
+
+  <Hero
+    tagline="Glossaire"
+    actions={[
+      { variant: 'primary', text: 'Voir nos services', href: '/automatisation', icon: 'tabler:arrow-right' },
+      { text: 'Prendre contact', href: '/contact' },
+    ]}
+  >
+    <Fragment slot="title">
+      Glossaire
+      <span class="text-accent dark:text-white"> automatisation & audit processus</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Les termes essentiels pour comprendre l'automatisation et l'audit de processus —
+      expliqués simplement, sans jargon, pour les dirigeants de TPE et PME.
+    </Fragment>
+  </Hero>
+
+  <Features
+    id="definitions"
+    tagline="Définitions"
+    title="Les 4 termes clés à connaître"
+    subtitle="Ces concepts sont au coeur de toute démarche d'automatisation réussie."
+    items={[
+      {
+        title: 'Automatisation de processus',
+        description: 'L\'automatisation de processus consiste à confier à des logiciels les tâches répétitives et manuelles de votre entreprise. Résultat : vos équipes se concentrent sur ce qui crée vraiment de la valeur. <a href="/glossaire/automatisation-processus" class="text-primary font-semibold hover:underline">Lire la définition complète →</a>',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Audit de processus',
+        description: 'L\'audit de processus est une analyse structurée de vos flux de travail pour cartographier vos pertes de temps et identifier les opportunités d\'automatisation. Le point de départ de toute transformation. <a href="/glossaire/audit-processus" class="text-primary font-semibold hover:underline">Lire la définition complète →</a>',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'RPA — Robotic Process Automation',
+        description: 'Le RPA désigne des logiciels capables d\'imiter les actions humaines sur un ordinateur (clic, saisie, copier-coller) pour automatiser des processus répétitifs. Très utilisé en comptabilité et gestion administrative. <a href="/glossaire/rpa" class="text-primary font-semibold hover:underline">Lire la définition complète →</a>',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'No-code / Low-code',
+        description: 'Les outils no-code et low-code permettent de créer des automatisations et des applications sans écrire de code (ou presque). Make, Zapier, Airtable : des plateformes accessibles à tous. <a href="/glossaire/no-code-low-code" class="text-primary font-semibold hover:underline">Lire la définition complète →</a>',
+        icon: 'tabler:puzzle',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Demander un diagnostic gratuit',
+        href: '/contact',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Prêt à passer à l'action ?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Connaître les termes, c'est bien. Automatiser votre entreprise, c'est mieux.<br />
+      Diagnostic express en 30 minutes — sans engagement.
+    </Fragment>
+  </CallToAction>
+</Layout>
