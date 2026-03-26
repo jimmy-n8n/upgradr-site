@@ -6,9 +6,10 @@ import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Note from '~/components/widgets/Note.astro';
 
 const metadata = {
-  title: 'UpgradR — Passez au niveau supérieur',
+  title: 'UpgradR — Audit & Automatisation pour Entreprises',
   ignoreTitleTemplate: true,
 };
 ---
@@ -20,7 +21,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Prendre contact',
+        text: 'Réserver un audit gratuit',
         href: '/contact',
         icon: 'tabler:arrow-right',
       },
@@ -34,9 +35,12 @@ const metadata = {
 
     <Fragment slot="subtitle">
       UpgradR audite vos processus et automatise vos tâches répétitives.
-      Moins de friction, plus de performance — sans recruter.
+      <strong>Moins de friction, plus de performance</strong> — sans recruter.
     </Fragment>
   </Hero>
+
+  <!-- Accroche confiance -->
+  <Note title="Audit gratuit :" description="30 minutes d'appel pour identifier vos premières pistes d'automatisation — sans engagement, sans jargon." />
 
   <!-- Services -->
   <Features
@@ -47,12 +51,12 @@ const metadata = {
     items={[
       {
         title: 'Audit processus',
-        description: 'On cartographie vos flux de travail pour identifier les goulots d\'étranglement, les tâches manuelles inutiles et les outils mal exploités.',
+        description: 'On cartographie vos flux de travail pour identifier les tâches manuelles inutiles, les goulots d\'étranglement et les outils mal exploités.',
         icon: 'tabler:clipboard-check',
       },
       {
         title: 'Automatisation sur mesure',
-        description: 'Scripts, webhooks, no-code ou code — on automatise ce qui vous prend du temps : relances, reporting, synchronisation de données, etc.',
+        description: 'Scripts, webhooks, no-code ou code — on automatise ce qui vous prend du temps : relances, reporting, synchronisation de données, facturation, etc.',
         icon: 'tabler:robot',
       },
       {
@@ -62,12 +66,12 @@ const metadata = {
       },
       {
         title: 'Tableaux de bord & reporting',
-        description: 'Vos données éparpillées dans 10 outils différents ? On centralise et on automatise vos rapports pour que vous pilotiez en temps réel.',
+        description: 'Vos données éparpillées dans 10 outils ? On centralise et on automatise vos rapports pour piloter en temps réel sans intervention manuelle.',
         icon: 'tabler:chart-bar',
       },
       {
         title: 'Connexion d\'outils (CRM, ERP, etc.)',
-        description: 'Zapier, Make, API custom — on connecte vos outils entre eux pour supprimer les copier-coller et les erreurs humaines.',
+        description: 'Zapier, Make, API custom — on connecte vos outils entre eux pour supprimer les saisies multiples et les erreurs humaines.',
         icon: 'tabler:plug-connected',
       },
       {
@@ -81,25 +85,25 @@ const metadata = {
   <!-- Process -->
   <Steps
     id="process"
-    title="Comment ça marche"
+    title="3 étapes pour automatiser votre entreprise"
     items={[
       {
-        title: 'Étape 1 : <span class="font-medium">Audit gratuit</span>',
-        description: 'Un appel de 30 min pour comprendre votre situation, vos outils et vos points de douleur. On vous dit franchement si on peut vous aider.',
+        title: 'Étape 1 : <span class="font-medium">Audit gratuit (30 min)</span>',
+        description: 'Un appel pour comprendre votre situation, vos outils et vos points de douleur. On vous dit franchement si on peut vous aider — et comment.',
         icon: 'tabler:phone',
       },
       {
         title: 'Étape 2 : <span class="font-medium">Proposition sur mesure</span>',
-        description: 'On vous présente un plan d\'action clair avec les automations prioritaires, les gains estimés et le budget.',
+        description: 'Un plan d\'action clair avec les automations prioritaires, les gains estimés et un devis fixe. Pas de surprise.',
         icon: 'tabler:file-description',
       },
       {
-        title: 'Étape 3 : <span class="font-medium">Déploiement</span>',
-        description: 'On met en place les solutions, on teste, on forme vos équipes. Délai typique : 2 à 4 semaines selon la complexité.',
+        title: 'Étape 3 : <span class="font-medium">Déploiement & formation</span>',
+        description: 'On met en place les solutions, on teste, on forme vos équipes. Délai typique : 2 à 4 semaines.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'C\'est parti.',
+        title: 'Votre entreprise tourne seule.',
         icon: 'tabler:check',
       },
     ]}
@@ -118,40 +122,45 @@ const metadata = {
     items={[
       {
         title: 'On est une petite entreprise, c\'est fait pour nous ?',
-        description: 'Oui. On travaille avec des TPE et PME de 5 à 200 personnes. Les petites structures ont souvent plus à gagner à automatiser, car chaque heure compte davantage.',
+        description: 'Oui. On travaille avec des TPE et PME de 5 à 200 personnes. Les petites structures ont souvent plus à gagner à automatiser — chaque heure perdue compte davantage.',
       },
       {
         title: 'On a déjà des outils en place, vous travaillez avec ?',
-        description: 'Dans la majorité des cas, oui. On s\'adapte à votre stack existant (Google Workspace, Notion, Airtable, HubSpot, etc.) avant de recommander de nouveaux outils.',
+        description: 'Dans la majorité des cas, oui. On s\'adapte à votre stack existant (Google Workspace, Notion, Airtable, HubSpot, Salesforce, etc.) avant de recommander quoi que ce soit.',
       },
       {
         title: 'Combien ça coûte ?',
-        description: 'Ça dépend du périmètre. L\'audit initial est gratuit. Ensuite, on propose un devis fixe par projet — pas de facturation à l\'heure qui dérape.',
+        description: 'L\'audit initial est 100% gratuit. Ensuite, on propose un devis fixe par projet — pas de facturation à l\'heure. Vous savez ce que vous payez avant de vous engager.',
       },
       {
-        title: 'Et si ça ne fonctionne pas après ?',
+        title: 'Combien de temps ça prend ?',
+        description: 'Entre 2 et 4 semaines selon la complexité. Certaines automations simples peuvent être livrées en moins d\'une semaine.',
+      },
+      {
+        title: 'Et si ça ne fonctionne pas après la livraison ?',
         description: 'On garantit un suivi post-déploiement. Si une automation plante ou si le besoin évolue, on corrige sans facturation supplémentaire pendant la période de garantie.',
       },
     ]}
   />
 
-  <!-- CTA -->
+  <!-- CTA final -->
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Réserver un audit gratuit',
+        text: 'Réserver mon audit gratuit',
         href: '/contact',
         icon: 'tabler:arrow-right',
       },
     ]}
   >
     <Fragment slot="title">
-      Prêt à gagner du temps ?
+      Combien vous coûte une heure de tâche manuelle par jour ?
     </Fragment>
 
     <Fragment slot="subtitle">
-      Un appel de 30 min suffit pour identifier vos premières pistes d'automatisation.
+      Calculez ce que l'automatisation peut vous rapporter.<br/>
+      L'audit est gratuit — la décision vous appartient.
     </Fragment>
   </CallToAction>
 
