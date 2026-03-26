@@ -16,12 +16,11 @@ const metadata = {
 
 <Layout metadata={metadata}>
 
-  <!-- Hero -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Réserver un audit gratuit',
+        text: 'Demander un diagnostic',
         href: '/contact',
         icon: 'tabler:arrow-right',
       },
@@ -30,19 +29,19 @@ const metadata = {
     image={{ src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2070&q=80', alt: 'UpgradR — Automatisation entreprise' }}
   >
     <Fragment slot="title">
-      Passez au <span class="text-accent dark:text-white">niveau supérieur.</span>
+      Vos équipes passent des heures sur des tâches qui pourraient
+      <span class="text-accent dark:text-white"> se faire seules.</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      UpgradR audite vos processus et automatise vos tâches répétitives.
-      <strong>Moins de friction, plus de performance</strong> — sans recruter.
+      UpgradR audite vos processus et automatise ce qui vous coûte du temps.
+      <strong>Tarif fixe, sans surprise, sans recruter.</strong>
+      Pour les PME et TPE francophones qui veulent scaler sans alourdir leur masse salariale.
     </Fragment>
   </Hero>
 
-  <!-- Accroche confiance -->
-  <Note title="Audit gratuit :" description="30 minutes d'appel pour identifier vos premières pistes d'automatisation — sans engagement, sans jargon." />
+  <Note title="Diagnostic express :" description="On cartographie vos pertes de temps en 30 minutes — avant de vous proposer quoi que ce soit." />
 
-  <!-- Services -->
   <Features
     id="services"
     tagline="Services"
@@ -51,7 +50,7 @@ const metadata = {
     items={[
       {
         title: 'Audit processus',
-        description: 'On cartographie vos flux de travail pour identifier les tâches manuelles inutiles, les goulots d\'étranglement et les outils mal exploités.',
+        description: 'On cartographie vos flux de travail pour identifier les tâches manuelles inutiles, les goulots d\'étranglement et les outils mal exploités. C\'est notre service phare — et le point de départ de toute mission.',
         icon: 'tabler:clipboard-check',
       },
       {
@@ -66,40 +65,39 @@ const metadata = {
       },
       {
         title: 'Tableaux de bord & reporting',
-        description: 'Vos données éparpillées dans 10 outils ? On centralise et on automatise vos rapports pour piloter en temps réel sans intervention manuelle.',
+        description: 'Vos données éparpillées dans 10 outils ? On centralise et automatise vos rapports pour piloter en temps réel, sans intervention manuelle.',
         icon: 'tabler:chart-bar',
       },
       {
         title: 'Connexion d\'outils (CRM, ERP, etc.)',
-        description: 'Zapier, Make, API custom — on connecte vos outils entre eux pour supprimer les saisies multiples et les erreurs humaines.',
+        description: 'Zapier, Make, n8n, API custom — on connecte vos outils entre eux pour supprimer les saisies multiples et les erreurs humaines.',
         icon: 'tabler:plug-connected',
       },
       {
         title: 'Formation & accompagnement',
-        description: 'On ne disparaît pas après la livraison. On forme vos équipes et on reste disponibles pour itérer sur ce qu\'on a mis en place.',
+        description: 'On ne disparaît pas après la livraison. On forme vos équipes et restons disponibles pour itérer — suivi 30 jours inclus dans chaque mission.',
         icon: 'tabler:users',
       },
     ]}
   />
 
-  <!-- Process -->
   <Steps
     id="process"
     title="3 étapes pour automatiser votre entreprise"
     items={[
       {
-        title: 'Étape 1 : <span class="font-medium">Audit gratuit (30 min)</span>',
-        description: 'Un appel pour comprendre votre situation, vos outils et vos points de douleur. On vous dit franchement si on peut vous aider — et comment.',
+        title: 'Étape 1 : <span class="font-medium">Diagnostic (30 min)</span>',
+        description: 'On comprend votre activité, vos outils et vos points de douleur. On vous dit franchement ce qu\'on peut automatiser — et le ROI estimé.',
         icon: 'tabler:phone',
       },
       {
         title: 'Étape 2 : <span class="font-medium">Proposition sur mesure</span>',
-        description: 'Un plan d\'action clair avec les automations prioritaires, les gains estimés et un devis fixe. Pas de surprise.',
+        description: 'Un plan d\'action clair avec les automations prioritaires et un devis fixe. Vous savez ce que vous payez avant de signer.',
         icon: 'tabler:file-description',
       },
       {
         title: 'Étape 3 : <span class="font-medium">Déploiement & formation</span>',
-        description: 'On met en place les solutions, on teste, on forme vos équipes. Délai typique : 2 à 4 semaines.',
+        description: 'On met en place, on teste, on forme vos équipes. Délai typique : 2 à 4 semaines.',
         icon: 'tabler:rocket',
       },
       {
@@ -113,7 +111,6 @@ const metadata = {
     }}
   />
 
-  <!-- FAQ -->
   <FAQs
     id="faq"
     title="Questions fréquentes"
@@ -121,46 +118,45 @@ const metadata = {
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'On est une petite entreprise, c\'est fait pour nous ?',
-        description: 'Oui. On travaille avec des TPE et PME de 5 à 200 personnes. Les petites structures ont souvent plus à gagner à automatiser — chaque heure perdue compte davantage.',
+        title: 'On est une petite structure, c\'est fait pour nous ?',
+        description: 'Oui. On travaille avec des TPE et PME de 5 à 200 personnes, partout en francophonie. Les petites structures ont souvent plus à gagner — chaque heure perdue compte davantage.',
       },
       {
-        title: 'On a déjà des outils en place, vous travaillez avec ?',
-        description: 'Dans la majorité des cas, oui. On s\'adapte à votre stack existant (Google Workspace, Notion, Airtable, HubSpot, Salesforce, etc.) avant de recommander quoi que ce soit.',
+        title: 'Vous travaillez avec nos outils existants ?',
+        description: 'Dans la grande majorité des cas, oui. On s\'adapte à votre stack (Google Workspace, Notion, Airtable, HubSpot, Salesforce, etc.) avant de recommander quoi que ce soit de nouveau.',
       },
       {
         title: 'Combien ça coûte ?',
-        description: 'L\'audit initial est 100% gratuit. Ensuite, on propose un devis fixe par projet — pas de facturation à l\'heure. Vous savez ce que vous payez avant de vous engager.',
+        description: 'Nos audits démarrent à 500€. C\'est en dessous des grands audits financés BPI, mais nettement plus rapide et actionnable. Chaque mission se fait sur devis fixe — pas de facturation à l\'heure.',
       },
       {
         title: 'Combien de temps ça prend ?',
-        description: 'Entre 2 et 4 semaines selon la complexité. Certaines automations simples peuvent être livrées en moins d\'une semaine.',
+        description: 'Entre 2 et 4 semaines selon la complexité. Certaines automations simples sont livrées en moins d\'une semaine.',
       },
       {
         title: 'Et si ça ne fonctionne pas après la livraison ?',
-        description: 'On garantit un suivi post-déploiement. Si une automation plante ou si le besoin évolue, on corrige sans facturation supplémentaire pendant la période de garantie.',
+        description: 'Suivi 30 jours post-déploiement inclus. Si une automation plante ou si le besoin évolue, on corrige sans facturation supplémentaire pendant cette période.',
       },
     ]}
   />
 
-  <!-- CTA final -->
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Réserver mon audit gratuit',
+        text: 'Demander mon diagnostic',
         href: '/contact',
         icon: 'tabler:arrow-right',
       },
     ]}
   >
     <Fragment slot="title">
-      Combien vous coûte une heure de tâche manuelle par jour ?
+      1h de tâche manuelle par jour = 250h perdues par an.
     </Fragment>
 
     <Fragment slot="subtitle">
-      Calculez ce que l'automatisation peut vous rapporter.<br/>
-      L'audit est gratuit — la décision vous appartient.
+      On vous montre lesquelles automatiser — et ce que ça vous rapporte.<br/>
+      Diagnostic express, résultats concrets.
     </Fragment>
   </CallToAction>
 
