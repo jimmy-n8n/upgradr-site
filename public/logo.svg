@@ -1,0 +1,17 @@
+<svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>UpgradR</title>
+  <!-- U shape -->
+  <path d="M55 22L55 65Q100 110 145 65L145 22"
+    stroke="#0f172a" stroke-width="20" stroke-linecap="round" fill="none"/>
+  <!-- Arrow shaft -->
+  <path d="M100 88V8"
+    stroke="#2563eb" stroke-width="12" stroke-linecap="round"/>
+  <!-- Arrow head -->
+  <path d="M84 27L100 8L116 27"
+    stroke="#2563eb" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wordmark -->
+  <text x="100" y="150"
+    font-family="Inter,'Helvetica Neue',Arial,sans-serif"
+    font-size="30" font-weight="700" fill="#0f172a"
+    text-anchor="middle" letter-spacing="-0.5">UpgradR</text>
+</svg>
