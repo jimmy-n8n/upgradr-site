@@ -26,16 +26,21 @@ const metadata = {
       },
       { text: 'Voir les services', href: '#services' },
     ]}
-    image={{ src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2070&q=80', alt: 'UpgradR — Automatisation entreprise' }}
   >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_0%,rgba(59,130,246,0.18),transparent)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_40%_35%_at_50%_0%,rgba(139,92,246,0.12),transparent)]"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image:radial-gradient(rgb(255 255 255) 1px,transparent 1px);background-size:28px 28px;"></div>
+    </Fragment>
+
     <Fragment slot="title">
-      Vos équipes passent des heures sur des tâches qui pourraient
-      <span class="text-accent dark:text-white"> se faire seules.</span>
+      Vos équipes perdent du temps sur des tâches qui pourraient
+      <span class="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent"> se faire seules.</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       UpgradR audite vos processus et automatise ce qui vous coûte du temps.
-      <strong>Tarif fixe, sans surprise, sans recruter.</strong>
+      <strong class="text-slate-200">Tarif fixe, sans surprise, sans recruter.</strong>
       Pour les PME et TPE francophones qui veulent scaler sans alourdir leur masse salariale.
     </Fragment>
   </Hero>

@@ -27,6 +27,11 @@
 
   .btn-primary {
     @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.35);
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 28px rgba(59, 130, 246, 0.55);
   }
 
   .btn-secondary {
