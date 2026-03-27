@@ -1,307 +1,5 @@
 [
   {
-    "slug": "artisan-batiment",
-    "label": "Artisan / BTP",
-    "label_plural": "artisans et entreprises du BTP",
-    "intro": "Les artisans et entreprises du BTP perdent en moyenne 12 heures par semaine sur des tâches administratives répétitives. Cela représente 18 000 € de pertes annuelles par salarié en productivité gaspillée. L'automatisation libère 8 heures hebdomadaires pour se concentrer sur les chantiers rentables.",
-    "taches": [
-      {
-        "titre": "Devis manuels papier",
-        "description": "Rédaction manuelle de devis prend 4h/semaine ; automatisée via IA qui génère devis en 5 min à partir de modèles CCTP analysés.",
-        "outils": [
-          "Procore",
-          "IA PlanRadar"
-        ],
-        "temps_economise": "3h/semaine"
-      },
-      {
-        "titre": "Facturation clients retardée",
-        "description": "Saisie manuelle des factures consomme 5h/semaine ; automatisée par ERP qui envoie factures automatiques post-chantier.",
-        "outils": [
-          "Sage BTP",
-          "Effy"
-        ],
-        "temps_economise": "4h/semaine"
-      },
-      {
-        "titre": "Suivi planning chantiers",
-        "description": "Mise à jour manuelle des plannings coûte 6h/semaine ; IA prédictive ajuste en temps réel et réduit retards de 15%.",
-        "outils": [
-          "BIM 360",
-          "Algolia IA"
-        ],
-        "temps_economise": "5h/semaine"
-      },
-      {
-        "titre": "Gestion stocks matériaux",
-        "description": "Inventaires manuels prennent 3h/semaine ; automatisée par capteurs IoT et alertes seuils en temps réel.",
-        "outils": [
-          "Trimble",
-          "Mobix ERP"
-        ],
-        "temps_economise": "2h/semaine"
-      },
-      {
-        "titre": "Rapports chantiers hebdo",
-        "description": "Compilation manuelle de rapports avale 4h/semaine ; dashboards IA génèrent synthèses automatiques avec photos chantier.",
-        "outils": [
-          "Fieldwire",
-          "Thunderbit"
-        ],
-        "temps_economise": "3h/semaine"
-      },
-      {
-        "titre": "Appels d'offres manuels",
-        "description": "Préparation appels d'offres exige 7h/semaine ; IA extrait clauses CCTP et compare offres similaires en 20 min.",
-        "outils": [
-          "Autodesk",
-          "IA BTP"
-        ],
-        "temps_economise": "6h/semaine"
-      }
-    ],
-    "workflow_exemple": {
-      "titre": "Workflow automatisé devis-chantier-facture",
-      "contexte": "Les artisans BTP perdent 10h/semaine sur cycle devis à facturation, causant 20% de retards clients.",
-      "etapes": [
-        "Étape 1 : Client envoie demande via formulaire Procore, IA génère devis auto en 3 min",
-        "Étape 2 : Signature électronique via Effy, planning BIM 360 se met à jour instantanément",
-        "Étape 3 : Avancement chantier tracké par Fieldwire, alertes retards IA PlanRadar",
-        "Étape 4 : Facture Sage BTP envoyée auto à 100% chantier fini, paiement +15% plus rapide"
-      ],
-      "gain": "9h/semaine économisées soit ~1400€/mois (base SMIC chargé)"
-    },
-    "outils_recommandes": [
-      "Procore",
-      "Sage BTP",
-      "PlanRadar",
-      "Fieldwire"
-    ],
-    "roi_estime": "10 à 15 heures automatisées par semaine, soit 1500€ à 2300€ économisés par mois",
-    "faq": [
-      {
-        "question": "Combien d'heures l'automatisation économise-t-elle vraiment en BTP ?",
-        "reponse": "8 à 12h/semaine sur tâches admin pour artisans BTP. ROI en 6 mois via outils comme Procore."
-      },
-      {
-        "question": "Quels outils gratuits pour démarrer en automatisation BTP ?",
-        "reponse": "Fieldwire gratuit pour suivi chantiers, Effy essai 30 jours pour factures. Gain immédiat 3h/semaine."
-      },
-      {
-        "question": "Quel budget pour automatiser un atelier BTP de 5 personnes ?",
-        "reponse": "200€/mois pour Sage BTP + IA basique. Amortissement en 2 mois sur gains productivité."
-      },
-      {
-        "question": "Quels résultats attendre après 3 mois d'automatisation BTP ?",
-        "reponse": "15% retards en moins, 1200€/mois économisés. Productivité +25% sur chantiers selon études FFB."
-      }
-    ],
-    "meta_description": "Automatisation Artisan / BTP : économisez 12h/semaine sur admin. Outils IA, ROI 1500€/mois pour PME françaises. Guide 2026."
-  },
-  {
-    "slug": "cabinet-comptable",
-    "label": "Cabinet Comptable",
-    "label_plural": "cabinets comptables",
-    "intro": "Les cabinets comptables consacrent entre 50 et 60% de leur temps à des tâches répétitives de traitement de pièces comptables qui peuvent être automatisées. L'IA agentique et la facturation électronique obligatoire en 2026-2027 créent une opportunité majeure : les cabinets digitalisés affichent des gains de productivité de 40 à 60%. Concrètement, cela signifie passer du traitement manuel à l'automatisation intelligente des factures, imputations et relances clients.",
-    "taches": [
-      {
-        "titre": "Reconnaissance et extraction de factures",
-        "description": "Actuellement, les collaborateurs passent 8-10 heures par semaine à saisir manuellement les données de factures (montants, dates, fournisseurs). L'IA de Cegid Loop automatise la reconnaissance des factures, l'extraction des données et l'affectation dans les comptes, avec un système d'apprentissage qui s'améliore au fil des corrections.",
-        "outils": [
-          "Cegid Loop",
-          "Dext",
-          "Plateformes SaaS comptables"
-        ],
-        "temps_economise": "8-10h/semaine"
-      },
-      {
-        "titre": "Imputation comptable automatisée",
-        "description": "Les imputations manuelles consomment 6-8 heures par semaine par collaborateur. L'IA agentique analyse les comportements historiques et applique automatiquement les règles comptables sans intervention humaine, réduisant les erreurs et accélérant le processus.",
-        "outils": [
-          "Dext",
-          "Assistants IA agentiques",
-          "Cegid Loop"
-        ],
-        "temps_economise": "6-8h/semaine"
-      },
-      {
-        "titre": "Génération de fiches d'immobilisations",
-        "description": "La création manuelle de fiches d'immobilisations et des plans d'amortissement représente 4-5 heures par semaine. L'IA agentique génère automatiquement ces documents en analysant les données comptables et les règles fiscales applicables.",
-        "outils": [
-          "Assistants IA agentiques",
-          "Plateformes cloud comptables"
-        ],
-        "temps_economise": "4-5h/semaine"
-      },
-      {
-        "titre": "Automatisation des relances clients",
-        "description": "Les relances manuelles de clients pour factures impayées consomment 3-4 heures par semaine. L'IA agentique automatise l'envoi de relances selon des règles prédéfinies, avec suivi et escalade intelligente.",
-        "outils": [
-          "Dext",
-          "Assistants IA agentiques",
-          "Plateformes SaaS"
-        ],
-        "temps_economise": "3-4h/semaine"
-      },
-      {
-        "titre": "Traitement de la facturation électronique",
-        "description": "Avec l'obligation de facturation électronique (septembre 2026 pour grandes entreprises, 2027 pour PME), les cabinets doivent traiter des flux documentaires structurés. L'automatisation réduit le temps de traitement de 5-6 heures par semaine en intégrant directement les données dans les systèmes comptables.",
-        "outils": [
-          "Cegid Loop",
-          "Plateformes e-invoicing",
-          "Dext"
-        ],
-        "temps_economise": "5-6h/semaine"
-      },
-      {
-        "titre": "Rapprochement bancaire et lettrage",
-        "description": "Le rapprochement manuel des comptes bancaires et le lettrage des écritures représentent 4-5 heures par semaine. L'IA agentique automatise ces opérations en croisant les données bancaires avec les écritures comptables, avec validation intelligente des anomalies.",
-        "outils": [
-          "Assistants IA agentiques",
-          "Plateformes cloud comptables",
-          "Cegid Loop"
-        ],
-        "temps_economise": "4-5h/semaine"
-      }
-    ],
-    "workflow_exemple": {
-      "titre": "Automatisation complète du cycle facture-à-paiement",
-      "contexte": "Un cabinet comptable traite en moyenne 200-300 factures par semaine pour ses clients PME, ce qui représente 30-35 heures de travail manuel. L'automatisation réduit ce temps à 8-10 heures.",
-      "etapes": [
-        "Étape 1 : Réception automatique des factures via portail client ou email, capture par Cegid Loop avec reconnaissance OCR",
-        "Étape 2 : Extraction des données (montant, date, fournisseur, TVA) et validation par IA agentique selon règles métier",
-        "Étape 3 : Imputation comptable automatique basée sur analyse comportementale des imputations historiques via Dext",
-        "Étape 4 : Génération automatique des écritures comptables, rapprochement bancaire et alertes sur anomalies détectées"
-      ],
-      "gain": "25-27h/semaine économisées soit ~3 200€-3 400€/mois (base SMIC chargé à ~15€/h)"
-    },
-    "outils_recommandes": [
-      "Cegid Loop",
-      "Dext",
-      "Assistants IA agentiques",
-      "Plateformes cloud comptables SaaS"
-    ],
-    "roi_estime": "30-35 heures automatisées par semaine, soit 3 600€ à 4 200€ économisés par mois par cabinet (base SMIC chargé)",
-    "faq": [
-      {
-        "question": "Combien de temps faut-il pour mettre en place l'automatisation dans un cabinet comptable ?",
-        "reponse": "Entre 2 et 4 semaines pour une intégration progressive des outils IA sur les tâches prioritaires. Les gains de productivité de 40 à 60% sont mesurables dès le premier mois."
-      },
-      {
-        "question": "L'IA agentique remplace-t-elle les collaborateurs des cabinets comptables ?",
-        "reponse": "Non, elle libère du temps sur les tâches répétitives pour que les collaborateurs se concentrent sur l'analyse, le conseil et les missions à plus forte valeur ajoutée. 91% des experts-comptables voient l'IA comme une opportunité, pas une menace."
-      },
-      {
-        "question": "Quel est le coût d'implémentation pour un petit cabinet comptable ?",
-        "reponse": "Les solutions SaaS comme Cegid Loop et Dext proposent des tarifs modulables à partir de quelques centaines d'euros par mois. Le ROI est atteint en 2-3 mois grâce aux heures économisées."
-      },
-      {
-        "question": "La facturation électronique obligatoire en 2026-2027 rend-elle l'automatisation urgente ?",
-        "reponse": "Oui, l'automatisation est essentielle pour gérer les nouveaux flux de facturation électronique sans surcharge. Les cabinets digitalisés affichent 40 à 60% de gains de productivité face à cette transformation."
-      }
-    ],
-    "meta_description": "Automatisation Cabinet Comptable : économisez 30-35h/semaine avec l'IA agentique. Gains de productivité 40-60%, ROI en 2-3 mois. Factures, imputations, relances automatisées."
-  },
-  {
-    "slug": "agence-immobiliere",
-    "label": "Agence Immobilière",
-    "label_plural": "agences immobilières",
-    "intro": "Les agences immobilières françaises perdent 11 heures par semaine sur des tâches administratives répétitives. Cela représente 60% de leur temps, soit 28 800€ de pertes annuelles par agent. L'automatisation libère 7h/semaine pour plus de ventes et de prospection.",
-    "taches": [
-      {
-        "titre": "Génération de documents",
-        "description": "Rédaction manuelle de mandats et baux prend 4h/semaine ; automatisée via templates intelligents dans CRM immo, génère et envoie en 1 clic.",
-        "outils": [
-          "Netty",
-          "iad"
-        ],
-        "temps_economise": "3h/semaine"
-      },
-      {
-        "titre": "Suivi clients",
-        "description": "Relances manuelles par email et appel absorbent 4h/semaine ; automatisées par CRM avec rappels intelligents et emails programmés.",
-        "outils": [
-          "Pedra.ai",
-          "Bien'ici"
-        ],
-        "temps_economise": "2.5h/semaine"
-      },
-      {
-        "titre": "Planification visites",
-        "description": "Synchronisation agendas manuelle coûte 3h/semaine ; automatisée par calendriers partagés et confirmations SMS automatiques.",
-        "outils": [
-          "Google Calendar",
-          "Flash-Immo"
-        ],
-        "temps_economise": "2h/semaine"
-      },
-      {
-        "titre": "Saisie données rapports",
-        "description": "Saisie manuelle de données clients prend 3h/semaine ; intégrée via OCR et reporting auto dans logiciels immo.",
-        "outils": [
-          "Immo2.pro",
-          "CRM Netty"
-        ],
-        "temps_economise": "2.5h/semaine"
-      },
-      {
-        "titre": "Gestion signatures",
-        "description": "Envoi et suivi signatures papier mobilise 2h/semaine ; digitalisée par signatures électroniques sécurisées.",
-        "outils": [
-          "Yousign",
-          "DocuSign"
-        ],
-        "temps_economise": "1.5h/semaine"
-      },
-      {
-        "titre": "Relances acquéreurs",
-        "description": "Relances manuelles prospects coûtent 2h/semaine ; automatisées par séquences email et SMS dans CRM.",
-        "outils": [
-          "Bien'ici",
-          "Pedra.ai"
-        ],
-        "temps_economise": "1.5h/semaine"
-      }
-    ],
-    "workflow_exemple": {
-      "titre": "Workflow prospection automatisée",
-      "contexte": "Les agents perdent 5h/semaine en relances manuelles prospects, manquant 20% des opportunités de vente.",
-      "etapes": [
-        "Étape 1 : Import leads via Netty depuis annonces Leboncoin",
-        "Étape 2 : Envoi séquence emails auto par Pedra.ai",
-        "Étape 3 : Rappels SMS via Bien'ici si non-réponse",
-        "Étape 4 : RDV auto booké dans Google Calendar, gain 4h/semaine traitées"
-      ],
-      "gain": "4h/semaine économisées soit ~1200€/mois (base SMIC chargé)"
-    },
-    "outils_recommandes": [
-      "Netty",
-      "Pedra.ai",
-      "Bien'ici",
-      "Yousign"
-    ],
-    "roi_estime": "10 à 15 heures automatisées par semaine, soit 2000€ à 3500€ économisés par mois",
-    "faq": [
-      {
-        "question": "Quel temps gagné sur administratif en agence immo ?",
-        "reponse": "50% de réduction, soit 7h/semaine libérées pour prospection. Implémentez CRM Netty dès aujourd'hui."
-      },
-      {
-        "question": "Quels outils pour relances clients immo France ?",
-        "reponse": "Pedra.ai et Bien'ici automatisent emails/SMS. Gain immédiat 2.5h/semaine sur suivis."
-      },
-      {
-        "question": "Coût mise en place automatisation agence immo ?",
-        "reponse": "50-150€/mois par outil comme Netty. ROI en 1 mois via 1200€ d'heures économisées."
-      },
-      {
-        "question": "Résultats attendus automatisation agence immo ?",
-        "reponse": "10h/semaine gagnées en 2 semaines, +20% ventes. 3000€/mois nets après 3 mois."
-      }
-    ],
-    "meta_description": "Automatisation Agence Immobilière : gagnez 11h/semaine sur administratif. Outils CRM français, ROI 2000€/mois. Études sectorielles immo France 2026."
-  },
-  {
     "slug": "restauration-hotellerie",
     "label": "Restauration / Hôtellerie",
     "label_plural": "restaurants et hôtels",
@@ -310,61 +8,37 @@
       {
         "titre": "Commandes fournisseurs manuelles",
         "description": "Saisir les commandes fournisseurs chaque matin prend 2h/jour. Automatisé via seuils de stock, les commandes partent seules quand le niveau minimum est atteint.",
-        "outils": [
-          "Lightspeed",
-          "Make",
-          "Google Sheets"
-        ],
+        "outils": ["Lightspeed", "Make", "Google Sheets"],
         "temps_economise": "8h/semaine"
       },
       {
         "titre": "Plannings équipe en bout de course",
         "description": "Construire le planning hebdomadaire prend 3h entre les contraintes légales, les disponibilités et les imprévus. Un outil de planning auto réduit ça à 30 minutes de validation.",
-        "outils": [
-          "Combo",
-          "Skello",
-          "Zapier"
-        ],
+        "outils": ["Combo", "Skello", "Zapier"],
         "temps_economise": "2.5h/semaine"
       },
       {
         "titre": "Réponse aux avis Google",
         "description": "Répondre aux avis Google manuellement prend 45 min/jour pour un restaurant actif. Un workflow IA rédige des réponses personnalisées par type d'avis en 5 minutes.",
-        "outils": [
-          "Make",
-          "Claude API",
-          "Google Business Profile API"
-        ],
+        "outils": ["Make", "Claude API", "Google Business Profile API"],
         "temps_economise": "4h/semaine"
       },
       {
         "titre": "Relances réservations et no-shows",
         "description": "Les no-shows coûtent en moyenne 8% du CA mensuel. Une séquence automatique (confirmation J-2, rappel J-1, SMS H-2) réduit les no-shows de 60%.",
-        "outils": [
-          "Zenchef",
-          "Twilio",
-          "Zapier"
-        ],
+        "outils": ["Zenchef", "Twilio", "Zapier"],
         "temps_economise": "3h/semaine + 8% CA récupéré"
       },
       {
         "titre": "Facturation groupes et séminaires",
         "description": "Éditer des factures pour des groupes avec des détails spécifiques prend 1h par événement. Automatisé via un formulaire → template → envoi PDF en 5 minutes.",
-        "outils": [
-          "Airtable",
-          "Make",
-          "Pennylane"
-        ],
+        "outils": ["Airtable", "Make", "Pennylane"],
         "temps_economise": "3h/semaine"
       },
       {
         "titre": "Rapports de caisse et clôture",
         "description": "La clôture de caisse et le rapport de fin de service prennent 1h chaque soir. Automatisés, les chiffres remontent directement dans le tableau de bord financier.",
-        "outils": [
-          "Lightspeed",
-          "Google Sheets",
-          "Make"
-        ],
+        "outils": ["Lightspeed", "Google Sheets", "Make"],
         "temps_economise": "5h/semaine"
       }
     ],
@@ -380,12 +54,7 @@
       ],
       "gain": "9h/semaine récupérées et 500 à 800€ de CA mensuel sauvé"
     },
-    "outils_recommandes": [
-      "Make",
-      "Zenchef",
-      "Lightspeed",
-      "Skello"
-    ],
+    "outils_recommandes": ["Make", "Zenchef", "Lightspeed", "Skello"],
     "roi_estime": "8 à 12 heures automatisées par semaine, soit 1 200 à 1 800€ économisés par mois",
     "faq": [
       {
@@ -416,62 +85,37 @@
       {
         "titre": "Synchronisation stocks multi-canaux",
         "description": "Gérer les stocks entre Shopify, Amazon et votre entrepôt manuellement provoque des surventes et des erreurs de 3 à 5 fois par semaine. Une synchronisation temps réel élimine ces erreurs.",
-        "outils": [
-          "Linnworks",
-          "Make",
-          "Shopify API"
-        ],
+        "outils": ["Linnworks", "Make", "Shopify API"],
         "temps_economise": "6h/semaine + 0 survente"
       },
       {
         "titre": "Relances paniers abandonnés",
         "description": "70% des paniers e-commerce sont abandonnés. Une séquence automatique de 3 emails (H+1, H+24, H+72) récupère entre 5 et 15% de ces paniers sans intervention humaine.",
-        "outils": [
-          "Klaviyo",
-          "Shopify Flow",
-          "Zapier"
-        ],
+        "outils": ["Klaviyo", "Shopify Flow", "Zapier"],
         "temps_economise": "5 à 15% de CA récupéré"
       },
       {
         "titre": "Gestion des retours et remboursements",
         "description": "Traiter un retour manuellement prend 15 minutes. Avec un workflow automatisé (étiquette retour, vérification, remboursement), c'est 3 minutes et 0 erreur.",
-        "outils": [
-          "ReturnGo",
-          "Shopify",
-          "Make"
-        ],
+        "outils": ["ReturnGo", "Shopify", "Make"],
         "temps_economise": "4h/semaine"
       },
       {
         "titre": "SAV et tickets répétitifs",
         "description": "60% des tickets SAV e-commerce concernent 5 sujets identiques (livraison, retour, paiement, promo, stock). Un bot IA répond automatiquement à ces 60% en 30 secondes.",
-        "outils": [
-          "Gorgias",
-          "Claude API",
-          "Shopify"
-        ],
+        "outils": ["Gorgias", "Claude API", "Shopify"],
         "temps_economise": "8h/semaine"
       },
       {
         "titre": "Mise à jour des fiches produits",
         "description": "Mettre à jour les prix, stocks et descriptions sur plusieurs canaux prend 4h/semaine. Un PIM centralisé propage les modifications automatiquement partout.",
-        "outils": [
-          "Airtable",
-          "Make",
-          "Shopify API",
-          "Amazon SP-API"
-        ],
+        "outils": ["Airtable", "Make", "Shopify API", "Amazon SP-API"],
         "temps_economise": "4h/semaine"
       },
       {
         "titre": "Reporting et analytics manuels",
         "description": "Consolider les chiffres Shopify, Google Ads et réseaux sociaux dans un tableau de bord chaque semaine prend 3h. Un dashboard automatique actualise tout en temps réel.",
-        "outils": [
-          "Google Looker Studio",
-          "Make",
-          "Shopify API"
-        ],
+        "outils": ["Google Looker Studio", "Make", "Shopify API"],
         "temps_economise": "3h/semaine"
       }
     ],
@@ -487,12 +131,7 @@
       ],
       "gain": "12 à 18% de CA supplémentaire sur les paniers abandonnés récupérés"
     },
-    "outils_recommandes": [
-      "Klaviyo",
-      "Make",
-      "Gorgias",
-      "Shopify Flow"
-    ],
+    "outils_recommandes": ["Klaviyo", "Make", "Gorgias", "Shopify Flow"],
     "roi_estime": "15 à 20 heures automatisées par semaine + 10 à 18% de CA supplémentaire récupéré",
     "faq": [
       {
@@ -523,61 +162,37 @@
       {
         "titre": "Prise de rendez-vous téléphonique",
         "description": "Le secrétariat passe 4h/jour à gérer les appels de prise de RDV. Un système de réservation en ligne + rappels automatiques réduit les appels de 65%.",
-        "outils": [
-          "Doctolib API",
-          "Calendly",
-          "Make"
-        ],
+        "outils": ["Doctolib API", "Calendly", "Make"],
         "temps_economise": "12h/semaine secrétariat"
       },
       {
         "titre": "Rappels de rendez-vous et réduction no-shows",
         "description": "Le taux de no-show médical est de 15 à 20% sans rappel. Une séquence SMS/email automatique (J-2 et H-2) le ramène sous 5%.",
-        "outils": [
-          "Doctolib",
-          "Twilio",
-          "Make"
-        ],
+        "outils": ["Doctolib", "Twilio", "Make"],
         "temps_economise": "15% de slots récupérés"
       },
       {
         "titre": "Envoi des documents administratifs",
         "description": "Envoyer ordonnances, comptes-rendus et feuilles de soin après consultation prend 20 min/patient. Automatisé via messagerie sécurisée, c'est 2 minutes.",
-        "outils": [
-          "Mailsecur",
-          "Apicrypt",
-          "Make"
-        ],
+        "outils": ["Mailsecur", "Apicrypt", "Make"],
         "temps_economise": "5h/semaine"
       },
       {
         "titre": "Relances patients perdus de vue",
         "description": "Les patients chroniques qui ne reprennent pas RDV représentent un manque à gagner de 15% du CA annuel. Un workflow de relance à 6 mois les réactive automatiquement.",
-        "outils": [
-          "Make",
-          "Mailchimp",
-          "Doctolib"
-        ],
+        "outils": ["Make", "Mailchimp", "Doctolib"],
         "temps_economise": "15% du CA en patients réactivés"
       },
       {
         "titre": "Comptabilité et notes d'honoraires",
         "description": "Éditer les notes d'honoraires et les télétransmettre à la CPAM prend 3h/semaine. Un logiciel connecté automatise la télétransmission à 100%.",
-        "outils": [
-          "Doctolib",
-          "Cegedim",
-          "Make"
-        ],
+        "outils": ["Doctolib", "Cegedim", "Make"],
         "temps_economise": "3h/semaine"
       },
       {
         "titre": "Gestion des urgences et liste d'attente",
         "description": "Gérer les annulations de dernière minute et proposer le créneau libéré à la liste d'attente prend 45 min/jour. Automatisé, le créneau est rempli en 10 minutes.",
-        "outils": [
-          "Doctolib",
-          "Twilio SMS",
-          "Make"
-        ],
+        "outils": ["Doctolib", "Twilio SMS", "Make"],
         "temps_economise": "4h/semaine"
       }
     ],
@@ -593,12 +208,7 @@
       ],
       "gain": "6 à 8 créneaux récupérés par semaine, soit 300 à 400€ de CA supplémentaire"
     },
-    "outils_recommandes": [
-      "Doctolib",
-      "Make",
-      "Twilio",
-      "Mailsecur"
-    ],
+    "outils_recommandes": ["Doctolib", "Make", "Twilio", "Mailsecur"],
     "roi_estime": "2 heures récupérées par praticien et par jour + 10 à 15% de créneaux supplémentaires remplis",
     "faq": [
       {
@@ -629,61 +239,37 @@
       {
         "titre": "Tri et qualification des CV",
         "description": "Trier 100 CVs manuellement prend 5 heures. Un workflow IA analyse les CVs selon vos critères, note les candidats et génère un shortlist commenté en 20 minutes.",
-        "outils": [
-          "Make",
-          "Claude API",
-          "Airtable"
-        ],
+        "outils": ["Make", "Claude API", "Airtable"],
         "temps_economise": "8h/semaine"
       },
       {
         "titre": "Relances et suivi candidats",
         "description": "Relancer manuellement chaque candidat à chaque étape du processus prend 3h/semaine. Des emails automatiques à chaque changement de statut gardent les candidats informés sans effort.",
-        "outils": [
-          "Workable",
-          "Make",
-          "Gmail"
-        ],
+        "outils": ["Workable", "Make", "Gmail"],
         "temps_economise": "3h/semaine"
       },
       {
         "titre": "Onboarding administratif",
         "description": "L'onboarding d'un nouveau salarié génère 12 documents à remplir et signer. Automatisé via un formulaire d'accueil + signature électronique, c'est 30 minutes au lieu de 4 heures.",
-        "outils": [
-          "Notion",
-          "Yousign",
-          "Make"
-        ],
+        "outils": ["Notion", "Yousign", "Make"],
         "temps_economise": "3.5h par recrutement"
       },
       {
         "titre": "Gestion des congés et absences",
         "description": "Valider les demandes de congés, mettre à jour les compteurs et prévenir les équipes prend 2h/semaine. Un workflow automatise tout de la demande à la validation.",
-        "outils": [
-          "Lucca",
-          "Slack",
-          "Make"
-        ],
+        "outils": ["Lucca", "Slack", "Make"],
         "temps_economise": "2h/semaine"
       },
       {
         "titre": "Entretiens annuels et suivi performance",
         "description": "Organiser les entretiens annuels, envoyer les trames, compiler les retours prend 3 semaines pour une entreprise de 50 personnes. Automatisé, c'est 3 jours.",
-        "outils": [
-          "Lattice",
-          "Google Forms",
-          "Make"
-        ],
+        "outils": ["Lattice", "Google Forms", "Make"],
         "temps_economise": "2 semaines/an"
       },
       {
         "titre": "Reporting RH mensuel",
         "description": "Consolider les indicateurs RH (turnover, absentéisme, recrutement, masse salariale) depuis plusieurs sources prend 4h/mois. Un dashboard automatique actualise tout en temps réel.",
-        "outils": [
-          "Google Looker Studio",
-          "Make",
-          "BambooHR"
-        ],
+        "outils": ["Google Looker Studio", "Make", "BambooHR"],
         "temps_economise": "4h/mois"
       }
     ],
@@ -699,12 +285,7 @@
       ],
       "gain": "80 CVs traités en 25 minutes au lieu de 6 heures"
     },
-    "outils_recommandes": [
-      "Make",
-      "Airtable",
-      "Workable",
-      "Yousign"
-    ],
+    "outils_recommandes": ["Make", "Airtable", "Workable", "Yousign"],
     "roi_estime": "12 à 15 heures récupérées par semaine + 40% de réduction du délai de recrutement",
     "faq": [
       {
@@ -735,61 +316,37 @@
       {
         "titre": "Suivi des deadlines et échéances procédurales",
         "description": "Surveiller manuellement les délais légaux dans 50+ dossiers actifs génère un risque d'erreur constant. Un système automatisé envoie des alertes à J-30, J-7 et J-1 pour chaque échéance.",
-        "outils": [
-          "Clio",
-          "Make",
-          "Google Calendar"
-        ],
+        "outils": ["Clio", "Make", "Google Calendar"],
         "temps_economise": "5h/semaine + 0 deadline manquée"
       },
       {
         "titre": "Facturation des honoraires et relances",
         "description": "Éditer les factures d'honoraires mensuellement prend 4h. Les relances impayés prennent 2h supplémentaires. Automatisés, les deux se font en 30 minutes de validation.",
-        "outils": [
-          "Pennylane",
-          "Make",
-          "Stripe"
-        ],
+        "outils": ["Pennylane", "Make", "Stripe"],
         "temps_economise": "5h/semaine"
       },
       {
         "titre": "Onboarding client et KYC",
         "description": "Collecter les pièces justificatives, faire signer la convention d'honoraires et ouvrir le dossier prend 3h par nouveau client. Un formulaire d'onboarding automatisé réduit ça à 30 minutes.",
-        "outils": [
-          "Typeform",
-          "Yousign",
-          "Clio"
-        ],
+        "outils": ["Typeform", "Yousign", "Clio"],
         "temps_economise": "2.5h par nouveau client"
       },
       {
         "titre": "Recherche jurisprudentielle préliminaire",
         "description": "La recherche documentaire préliminaire sur un nouveau dossier prend 3 à 6h. Un assistant IA juridique effectue une première analyse des textes applicables et de la jurisprudence récente en 20 minutes.",
-        "outils": [
-          "Doctrine.fr",
-          "Claude API",
-          "Make"
-        ],
+        "outils": ["Doctrine.fr", "Claude API", "Make"],
         "temps_economise": "4h par dossier"
       },
       {
         "titre": "Rapports de situation client",
         "description": "Rédiger les points de situation mensuels pour chaque client prend 1h par client. Automatisés à partir des notes du dossier, ils sont générés en 10 minutes et soumis à validation.",
-        "outils": [
-          "Clio",
-          "Claude API",
-          "Make"
-        ],
+        "outils": ["Clio", "Claude API", "Make"],
         "temps_economise": "4h/semaine"
       },
       {
         "titre": "Gestion des actes et courriers répétitifs",
         "description": "Rédiger des actes types (mises en demeure, relances, accusés de réception) à partir de templates prend 45 min/acte. Automatisés, ils sont générés en 5 minutes avec les données du dossier.",
-        "outils": [
-          "Make",
-          "Claude API",
-          "Clio"
-        ],
+        "outils": ["Make", "Claude API", "Clio"],
         "temps_economise": "6h/semaine"
       }
     ],
@@ -805,12 +362,7 @@
       ],
       "gain": "24h de temps collaborateur récupérées par mois + expérience client professionnelle"
     },
-    "outils_recommandes": [
-      "Clio",
-      "Make",
-      "Yousign",
-      "Pennylane"
-    ],
+    "outils_recommandes": ["Clio", "Make", "Yousign", "Pennylane"],
     "roi_estime": "10 à 12 heures récupérées par collaborateur par semaine sur les tâches non facturables",
     "faq": [
       {
@@ -841,61 +393,37 @@
       {
         "titre": "Saisie des ordres de transport",
         "description": "Ressaisir manuellement les ordres de transport reçus par email ou fax dans le TMS prend 2h/jour. Un workflow OCR + IA extrait automatiquement les données et les importe.",
-        "outils": [
-          "Make",
-          "Claude API",
-          "Airtable"
-        ],
+        "outils": ["Make", "Claude API", "Airtable"],
         "temps_economise": "8h/semaine"
       },
       {
         "titre": "Génération des lettres de voiture",
         "description": "Éditer les CMR et lettres de voiture manuellement prend 15 min par transport. Automatisées à partir de l'ordre de transport, elles sont générées en 30 secondes.",
-        "outils": [
-          "Make",
-          "PDF generation API",
-          "Airtable"
-        ],
+        "outils": ["Make", "PDF generation API", "Airtable"],
         "temps_economise": "5h/semaine"
       },
       {
         "titre": "Suivi chauffeurs et remontée GPS",
         "description": "Appeler les chauffeurs pour des updates de position prend 1h/jour pour un dispatcher. L'intégration GPS automatique centralise les positions en temps réel sans appel.",
-        "outils": [
-          "Samsara",
-          "Make",
-          "Slack"
-        ],
+        "outils": ["Samsara", "Make", "Slack"],
         "temps_economise": "5h/semaine"
       },
       {
         "titre": "Facturation et pointage des prestations",
         "description": "Pointer les prestations réalisées versus les ordres de transport et éditer les factures prend 6h/semaine. Automatisé, le pointage se fait en temps réel et les factures partent automatiquement.",
-        "outils": [
-          "Make",
-          "Pennylane",
-          "Airtable"
-        ],
+        "outils": ["Make", "Pennylane", "Airtable"],
         "temps_economise": "6h/semaine + 85% erreurs en moins"
       },
       {
         "titre": "Gestion des documents chauffeurs (permis, FCOS)",
         "description": "Suivre les dates d'expiration des permis, FCOS, cartes conducteurs de 15 chauffeurs manuellement génère des risques réglementaires. Des alertes automatiques préviennent à J-60, J-30, J-7.",
-        "outils": [
-          "Airtable",
-          "Make",
-          "Gmail"
-        ],
+        "outils": ["Airtable", "Make", "Gmail"],
         "temps_economise": "2h/semaine + 0 risque réglementaire"
       },
       {
         "titre": "Reporting clients sur les livraisons",
         "description": "Envoyer les preuves de livraison et rapports de tournée aux clients prend 1h/jour. Automatisés, ils partent dans les 30 minutes suivant la livraison.",
-        "outils": [
-          "Make",
-          "Gmail",
-          "Samsara"
-        ],
+        "outils": ["Make", "Gmail", "Samsara"],
         "temps_economise": "5h/semaine"
       }
     ],
@@ -911,12 +439,7 @@
       ],
       "gain": "3h/jour récupérées et 0 erreur de facturation"
     },
-    "outils_recommandes": [
-      "Make",
-      "Airtable",
-      "Samsara",
-      "Pennylane"
-    ],
+    "outils_recommandes": ["Make", "Airtable", "Samsara", "Pennylane"],
     "roi_estime": "15 à 20 heures automatisées par semaine + 85% de réduction des erreurs de facturation",
     "faq": [
       {
@@ -947,61 +470,37 @@
       {
         "titre": "Relances prospects et devis en attente",
         "description": "Relancer manuellement les 50 devis en attente chaque semaine prend 4h. Une séquence automatique de 3 relances (J+3, J+7, J+14) augmente le taux de conversion de 22%.",
-        "outils": [
-          "Make",
-          "Pipedrive",
-          "Gmail"
-        ],
+        "outils": ["Make", "Pipedrive", "Gmail"],
         "temps_economise": "4h/semaine + 22% conversion"
       },
       {
         "titre": "Saisie et comparaison de devis",
         "description": "Saisir les informations client dans plusieurs comparateurs d'assurance prend 45 min par devis. Automatisé, le formulaire unique alimente tous les comparateurs simultanément.",
-        "outils": [
-          "Make",
-          "Zapier",
-          "APIs comparateurs"
-        ],
+        "outils": ["Make", "Zapier", "APIs comparateurs"],
         "temps_economise": "30 min par devis"
       },
       {
         "titre": "Gestion des renouvellements",
         "description": "Identifier les contrats à renouveler à 90, 60 et 30 jours et contacter les clients prend 3h/semaine. Un workflow automatique gère toute la séquence de renouvellement.",
-        "outils": [
-          "Make",
-          "Airtable",
-          "Twilio"
-        ],
+        "outils": ["Make", "Airtable", "Twilio"],
         "temps_economise": "3h/semaine"
       },
       {
         "titre": "Déclaration et suivi des sinistres",
         "description": "Collecter les pièces d'un sinistre, les transmettre à la compagnie et suivre le dossier prend 2h par sinistre. Un formulaire client + workflow de transmission réduit ça à 30 minutes.",
-        "outils": [
-          "Typeform",
-          "Make",
-          "Email API"
-        ],
+        "outils": ["Typeform", "Make", "Email API"],
         "temps_economise": "1.5h par sinistre"
       },
       {
         "titre": "Reporting portefeuille et commissions",
         "description": "Calculer les commissions et éditer le reporting portefeuille mensuel prend 6h. Automatisé, le tableau de bord se met à jour en temps réel.",
-        "outils": [
-          "Google Sheets",
-          "Make",
-          "Airtable"
-        ],
+        "outils": ["Google Sheets", "Make", "Airtable"],
         "temps_economise": "6h/mois"
       },
       {
         "titre": "Onboarding client et collecte des pièces",
         "description": "Collecter les justificatifs pour un nouveau contrat (CNI, RIB, justificatif domicile) prend 3 allers-retours par client. Un formulaire d'onboarding automatisé centralise tout en une fois.",
-        "outils": [
-          "Typeform",
-          "Make",
-          "Yousign"
-        ],
+        "outils": ["Typeform", "Make", "Yousign"],
         "temps_economise": "2h par nouveau contrat"
       }
     ],
@@ -1017,12 +516,7 @@
       ],
       "gain": "15% de contrats supplémentaires renouvelés, soit 40 à 60 contrats/an pour un portefeuille de 400"
     },
-    "outils_recommandes": [
-      "Make",
-      "Pipedrive",
-      "Typeform",
-      "Yousign"
-    ],
+    "outils_recommandes": ["Make", "Pipedrive", "Typeform", "Yousign"],
     "roi_estime": "12 à 15 heures automatisées par semaine + 15 à 22% d'amélioration du taux de renouvellement et conversion",
     "faq": [
       {
